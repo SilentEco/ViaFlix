@@ -20,6 +20,7 @@ namespace DatabaseConnection
                     new Customer { Name = "Björn" },
                     new Customer { Name = "Robin" },
                     new Customer { Name = "Kalle" },
+                    new Customer { Name = "Anders" },
                 });
 
                 var movies = new List<Movie>();
