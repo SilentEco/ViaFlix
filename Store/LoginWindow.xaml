@@ -28,13 +28,13 @@
         <Image Source="images/LoginLogo.png" Width="80" VerticalAlignment="Top" Margin="10,20"/>
         <TextBlock FontFamily="Arial Rounded MT Bold" FontSize="32" Text="VIAFLIX" 
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="120 " Foreground="White"/>
-        
+
         <Rectangle Width="200" Height="150" Fill="White" StrokeThickness="4" Margin="10" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
             <Rectangle.Effect >
                 <DropShadowEffect BlurRadius="5" Color="Black" Direction="200" RenderingBias="Quality" ShadowDepth="1"/>
             </Rectangle.Effect>
         </Rectangle>
-        
+
         <Grid Width="200" Height="150" VerticalAlignment="Center">
             <TextBlock FontFamily="Champagne &amp; Limousines" FontSize="12" Text="SIGN IN" 
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
@@ -43,7 +43,7 @@
 
                 <TextBox Name="NameField" materialDesign:HintAssist.Hint="USER NAME" 
                          Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
-                         FontFamily="Champagne &amp; Limousines" FontSize="10"/>
+                         FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#FFF32121" SelectionBrush="#FFEB3218" Foreground="Black"/>
 
                 <PasswordBox Margin="0,10" materialDesign:HintAssist.Hint="Password" 
                              Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
