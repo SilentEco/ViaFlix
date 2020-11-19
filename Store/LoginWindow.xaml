@@ -6,9 +6,12 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="400" Width="350" ResizeMode="NoResize">
+        Title="LoginWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
     <Grid Background="White">
-        <Rectangle Height="200" VerticalAlignment="Top">
+        <Rectangle Height="500" Width="330" VerticalAlignment="Bottom">
+
+        </Rectangle>
+        <Rectangle Height="250"  Width="330" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <LinearGradientBrush  StartPoint="2,0" EndPoint="0.0,5">
                     <GradientStop Color="White" Offset="0"/>
@@ -18,10 +21,11 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="images/worldwide (1).png" Width="80" VerticalAlignment="Top" Margin="10"/>
-        <Rectangle Width="200" Height="150" Fill="#FFEBEBEB" StrokeThickness="4" Margin="10" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
+       
+        <Image Source="images/home.png" Width="100" VerticalAlignment="Top" Margin="10"/>
+        <Rectangle Width="200" Height="150" Fill="White" StrokeThickness="4" Margin="10" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
             <Rectangle.Effect >
-                <DropShadowEffect BlurRadius="5" Color="White" Direction="0" RenderingBias="Quality" ShadowDepth="1"/>
+                <DropShadowEffect BlurRadius="5" Color="Black" Direction="200" RenderingBias="Quality" ShadowDepth="1"/>
             </Rectangle.Effect>
         </Rectangle>
         <Grid Width="200" Height="150" VerticalAlignment="Center">
@@ -32,7 +36,7 @@
             </StackPanel>
         </Grid>
 
-        <Button VerticalAlignment="Bottom"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,107" Height="20" Width="100" Content="LOGIN" Click="LogIn_Click" FontFamily="Champagne &amp; Limousines" FontSize="10"/>
+        <Button VerticalAlignment="Bottom"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,165" Height="20" Width="100" Content="LOGIN" Click="LogIn_Click" FontFamily="Champagne &amp; Limousines" FontSize="10"/>
     </Grid>
 
 
