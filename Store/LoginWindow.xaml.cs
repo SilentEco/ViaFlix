@@ -34,7 +34,7 @@ namespace Store
             }
             else
             {
-                NameField.Text = "...";
+                MessageBox.Show("Please enter your username:", "Error");
             }
         }
     }
