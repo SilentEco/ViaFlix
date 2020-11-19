@@ -8,35 +8,51 @@
         mc:Ignorable="d"
         Title="LoginWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
     <Grid Background="White">
+
         <Rectangle Height="500" Width="370" VerticalAlignment="Bottom">
 
         </Rectangle>
         <Rectangle Height="250"  Width="370" VerticalAlignment="Top">
-            <Rectangle.Fill>
+
+            <Rectangle.Fill >
+
                 <LinearGradientBrush  StartPoint="2,0" EndPoint="0,5">
                     <GradientStop Color="White" Offset="2"/>
                     <GradientStop Color="Yellow" Offset="2"/>
-                    <GradientStop Color="blue" Offset="1.5"/>
-                    <GradientStop Color="LightBlue" Offset=".1"/>
+                    <GradientStop Color="Blue" Offset="1.1"/>
+                    <GradientStop Color="Aqua" Offset="0.1"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-       
-        <Image Source="images/home.png" Width="100" VerticalAlignment="Top" Margin="10,0"/>
+
+        <Image Source="images/film-roll.png" Width="80" VerticalAlignment="Top" Margin="10,30"/>
+        
+        
         <Rectangle Width="200" Height="150" Fill="White" StrokeThickness="4" Margin="10" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
             <Rectangle.Effect >
                 <DropShadowEffect BlurRadius="5" Color="Black" Direction="200" RenderingBias="Quality" ShadowDepth="1"/>
             </Rectangle.Effect>
         </Rectangle>
+        
         <Grid Width="200" Height="150" VerticalAlignment="Center">
-            <TextBlock FontFamily="Champagne &amp; Limousines" FontSize="12" Text="LOGIN" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
+            <TextBlock FontFamily="Champagne &amp; Limousines" FontSize="12" Text="LOGIN" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
+
             <StackPanel VerticalAlignment="Center" Margin="10">
-                <TextBox Name="NameField" materialDesign:HintAssist.Hint="USER NAME" Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="10"/>
-                <PasswordBox Margin="0,10" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="10"/>
+
+                <TextBox Name="NameField" materialDesign:HintAssist.Hint="USER NAME" 
+                         Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         FontFamily="Champagne &amp; Limousines" FontSize="10"/>
+
+                <PasswordBox Margin="0,10" materialDesign:HintAssist.Hint="Password" 
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
+                             FontFamily="Champagne &amp; Limousines" FontSize="10"/>
             </StackPanel>
         </Grid>
 
-        <Button VerticalAlignment="Bottom"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,165" Height="20" Width="100" Content="LOGIN" Click="LogIn_Click" FontFamily="Champagne &amp; Limousines" FontSize="10"/>
+        <Button VerticalAlignment="Bottom"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
+                Margin="0,165" Height="20" Width="100" Content="LOGIN" 
+                Click="LogIn_Click" FontFamily="Champagne &amp; Limousines" FontSize="10"/>
     </Grid>
 
 

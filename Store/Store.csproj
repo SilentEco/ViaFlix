@@ -7,12 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\film-roll.png" />
     <None Remove="images\home.png" />
+    <None Remove="images\video-camera.png" />
     <None Remove="images\worldwide %281%29.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="images\film-roll.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="images\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\video-camera.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="images\worldwide (1).png">
