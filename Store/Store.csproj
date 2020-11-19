@@ -12,30 +12,13 @@
     <None Remove="images\film-roll %281%29.png" />
     <None Remove="images\film-roll.png" />
     <None Remove="images\home.png" />
+    <None Remove="images\LoginLogo.png" />
     <None Remove="images\video-camera.png" />
     <None Remove="images\worldwide %281%29.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="images\clapperboard (1).png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\clapperboard.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\film-roll (1).png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\film-roll.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\home.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\video-camera.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="images\worldwide (1).png">
+    <Content Include="images\LoginLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

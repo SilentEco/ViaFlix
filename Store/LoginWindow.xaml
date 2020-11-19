@@ -26,8 +26,8 @@
         </Rectangle>
 
         <Image Source="images/LoginLogo.png" Width="80" VerticalAlignment="Top" Margin="10,20"/>
-        <TextBlock FontFamily="Champagne &amp; Limousines" FontSize="32" Text="VIAFLIX" 
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Margin="125 " Foreground="White"/>
+        <TextBlock FontFamily="Arial Rounded MT Bold" FontSize="32" Text="VIAFLIX" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Margin="120 " Foreground="White"/>
         
         <Rectangle Width="200" Height="150" Fill="White" StrokeThickness="4" Margin="10" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
             <Rectangle.Effect >
@@ -36,7 +36,7 @@
         </Rectangle>
         
         <Grid Width="200" Height="150" VerticalAlignment="Center">
-            <TextBlock FontFamily="Champagne &amp; Limousines" FontSize="12" Text="LOGIN" 
+            <TextBlock FontFamily="Champagne &amp; Limousines" FontSize="12" Text="SIGN IN" 
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
 
             <StackPanel VerticalAlignment="Center" Margin="10">
@@ -53,7 +53,7 @@
 
         <Button VerticalAlignment="Bottom"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
                 Margin="0,165" Height="20" Width="100" Content="LOGIN" 
-                Click="LogIn_Click" FontFamily="Champagne &amp; Limousines" FontSize="10" Background='DarkRed' BorderBrush="DarkRed"/>
+                Click="LogIn_Click" FontFamily="Arial Black" FontSize="10" Background='DarkRed' BorderBrush="DarkRed"/>
     </Grid>
 
 
