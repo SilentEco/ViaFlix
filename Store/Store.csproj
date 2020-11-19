@@ -10,4 +10,8 @@
     <ProjectReference Include="..\DatabaseConnection\DatabaseConnection.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>
