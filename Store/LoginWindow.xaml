@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
         Title="LoginWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
-    <Grid Background="White">
+    <Grid Background="#FFE2E2E2">
 
         <Rectangle Height="500" Width="370" VerticalAlignment="Bottom">
 
@@ -17,16 +17,17 @@
             <Rectangle.Fill >
 
                 <LinearGradientBrush  StartPoint="2,0" EndPoint="0,5">
-                    <GradientStop Color="White" Offset="2"/>
-                    <GradientStop Color="Yellow" Offset="2"/>
+                    <GradientStop Color="WhiteSmoke" Offset="1.2"/>
+                    <GradientStop Color="Red" Offset="2"/>
                     <GradientStop Color="Blue" Offset="1.1"/>
-                    <GradientStop Color="Aqua" Offset="0.1"/>
+                    <GradientStop Color="DarkRed" Offset="0."/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
 
-        <Image Source="images/film-roll.png" Width="80" VerticalAlignment="Top" Margin="10,30"/>
-        
+        <Image Source="images/LoginLogo.png" Width="80" VerticalAlignment="Top" Margin="10,20"/>
+        <TextBlock FontFamily="Champagne &amp; Limousines" FontSize="32" Text="VIAFLIX" 
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Margin="125 " Foreground="White"/>
         
         <Rectangle Width="200" Height="150" Fill="White" StrokeThickness="4" Margin="10" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
             <Rectangle.Effect >
@@ -52,7 +53,7 @@
 
         <Button VerticalAlignment="Bottom"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
                 Margin="0,165" Height="20" Width="100" Content="LOGIN" 
-                Click="LogIn_Click" FontFamily="Champagne &amp; Limousines" FontSize="10"/>
+                Click="LogIn_Click" FontFamily="Champagne &amp; Limousines" FontSize="10" Background='DarkRed' BorderBrush="DarkRed"/>
     </Grid>
 
 

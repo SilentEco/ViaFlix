@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\clapperboard %281%29.png" />
+    <None Remove="images\clapperboard.png" />
+    <None Remove="images\film-roll %281%29.png" />
     <None Remove="images\film-roll.png" />
     <None Remove="images\home.png" />
     <None Remove="images\video-camera.png" />
@@ -14,6 +17,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="images\clapperboard (1).png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\clapperboard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\film-roll (1).png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="images\film-roll.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
