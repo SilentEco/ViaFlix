@@ -29,7 +29,7 @@
         </Rectangle>
 
         <Image Source="images/LoginLogo.png" Width="80" VerticalAlignment="Top" Margin="10,20"/>
-        <TextBlock FontFamily="Century Gothic" FontSize="32" Text="VIAFLIX+" 
+        <TextBlock FontFamily="Goldman" FontSize="32" Text="VIAFLIX+" 
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="120 " Foreground="White"/>
 
         <Rectangle Width="200" Height="150" Fill="White" StrokeThickness="4" Margin="10" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
@@ -55,7 +55,7 @@
         </Grid>
 
         <Button VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
-                Margin="0,165" Height="20" Width="100" Content="LOGIN" Style="{StaticResource MaterialDesignFlatDarkBgButton}"  materialDesign:ButtonAssist.CornerRadius="10"
+                Margin="0,165" Height="20" Width="100" Content="LOGIN" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
                 Click="LogIn_Click" FontFamily="Arial" FontSize="10" Background='#FF630028' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal"/>
     </Grid>
 
