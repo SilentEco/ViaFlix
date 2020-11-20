@@ -9,24 +9,22 @@
         Title="LoginWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
     <Grid Background="#FFE2E2E2">
 
-        <Rectangle Height="500" Width="370" VerticalAlignment="Bottom">
+        <Rectangle Height="500" Width="800" VerticalAlignment="Bottom">
 
         </Rectangle>
-        <Rectangle Height="250"  Width="370" VerticalAlignment="Top">
+        <Rectangle Height="250"  Width="800" VerticalAlignment="Top">
 
             <Rectangle.Fill >
 
                 <LinearGradientBrush  StartPoint="2,0" EndPoint="0,5">
-                    <GradientStop Color="WhiteSmoke" Offset="1.2"/>
-                    <GradientStop Color="Red" Offset="2"/>
-                    <GradientStop Color="Blue" Offset="1.1"/>
-                    <GradientStop Color="DarkRed" Offset="0."/>
+                    <GradientStop Color="DarkRed" Offset="0.1"/>
+                    <GradientStop Color="DarkBlue" Offset="1.3"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
 
         <Image Source="images/LoginLogo.png" Width="80" VerticalAlignment="Top" Margin="10,20"/>
-        <TextBlock FontFamily="Arial Rounded MT Bold" FontSize="32" Text="VIAFLIX" 
+        <TextBlock FontFamily="Century Gothic" FontSize="32" Text="VIAFLIX+" 
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="120 " Foreground="White"/>
 
         <Rectangle Width="200" Height="150" Fill="White" StrokeThickness="4" Margin="10" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
@@ -41,19 +39,19 @@
 
             <StackPanel VerticalAlignment="Center" Margin="10">
 
-                <TextBox Name="NameField" materialDesign:HintAssist.Hint="USER NAME" 
+                <TextBox Name="NameField" materialDesign:HintAssist.Hint="User name" 
                          Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
-                         FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#FFF32121" SelectionBrush="#FFEB3218" Foreground="Black"/>
+                         FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#FFBFBFBF" SelectionBrush="#FFC3C3C3" Foreground="Black"/>
 
                 <PasswordBox Margin="0,10" materialDesign:HintAssist.Hint="Password" 
                              Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
-                             FontFamily="Champagne &amp; Limousines" FontSize="10"/>
+                             FontFamily="Champagne &amp; Limousines" FontSize="10" SelectionBrush="#FF9F9FA0"/>
             </StackPanel>
         </Grid>
 
         <Button VerticalAlignment="Bottom"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
                 Margin="0,165" Height="20" Width="100" Content="LOGIN" 
-                Click="LogIn_Click" FontFamily="Arial Black" FontSize="10" Background='DarkRed' BorderBrush="DarkRed"/>
+                Click="LogIn_Click" FontFamily="Arial" FontSize="10" Background='#FF630028' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal"/>
     </Grid>
 
 
