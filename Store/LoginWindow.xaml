@@ -4,6 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
         Title="LoginWindow"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
@@ -49,8 +54,8 @@
             </StackPanel>
         </Grid>
 
-        <Button VerticalAlignment="Bottom"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
-                Margin="0,165" Height="20" Width="100" Content="LOGIN" 
+        <Button VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
+                Margin="0,165" Height="20" Width="100" Content="LOGIN" Style="{StaticResource MaterialDesignFlatDarkBgButton}"  materialDesign:ButtonAssist.CornerRadius="10"
                 Click="LogIn_Click" FontFamily="Arial" FontSize="10" Background='#FF630028' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal"/>
     </Grid>
 
