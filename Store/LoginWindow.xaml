@@ -27,7 +27,7 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Image Source="images/LoginLogo.png" Width="80" VerticalAlignment="Top" Margin="10,20"/>
+        <Image Source="images/LoginLogo256.png" Width="80" VerticalAlignment="Top" Margin="10,20"/>
         <TextBlock FontFamily="Goldman" FontSize="32" Text="VIAFLIX+" 
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="120 " Foreground="White"
                    />
