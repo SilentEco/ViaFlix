@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DatabaseConnection;
+using Microsoft.Data.SqlClient;
 
 namespace Store
 {
@@ -25,7 +26,7 @@ namespace Store
 
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
-            State.User = API.GetCustomerByName(NameField.Text.Trim());
+                State.User = API.GetCustomerByName(NameField.Text.Trim());
             if (State.User != null)
             {
                 var next_window = new MainWindow();
@@ -34,7 +35,7 @@ namespace Store
             }
             else
             {
-                NameField.Text = "...";
+                MessageBox.Show("Please enter your username", "Error");
             }
         }
     }
