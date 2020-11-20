@@ -11,28 +11,58 @@
         FontFamily="{materialDesign:MaterialDesignFont}"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="MainWindow" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
-    <ScrollViewer Height="450" Width="800">
-        <Grid Name="MovieGrid" Background="LightSteelBlue" ShowGridLines="True">
+        Title="MainWindow" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <StackPanel>
+        <Grid Width="850" Height="500">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="140" />
-                <RowDefinition Height="140" />
-                <RowDefinition Height="140" />
-                <RowDefinition Height="140" />
-                <RowDefinition Height="140" />
-                <RowDefinition Height="140" />
-                <RowDefinition Height="140" />
-                <RowDefinition Height="140" />
-                <RowDefinition Height="140" />
-                <RowDefinition Height="140" />
-            </Grid.RowDefinitions>
+
+            <Rectangle Grid.Column="0">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="DarkRed" Offset="0.1"/>
+                        <GradientStop Color="DarkBlue" Offset="1.3"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            
+            <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Right">
+                <Grid Width="700" Background="DarkRed" ShowGridLines="True" Height="2000" Name="MovieGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="100" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </ScrollViewer>
         </Grid>
-    </ScrollViewer>
+        
+    </StackPanel>
+    
 </Window>
