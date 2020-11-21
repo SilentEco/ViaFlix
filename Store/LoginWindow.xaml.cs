@@ -38,5 +38,12 @@ namespace Store
                 MessageBox.Show("Please enter your username", "Error");
             }
         }
+
+        private void SignUp_Click(object sender, RoutedEventArgs e)
+        {
+            var signUp = new SignUpWindow();
+            signUp.Show();
+            this.Close();
+        }
     }
 }
