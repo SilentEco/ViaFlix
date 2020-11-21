@@ -22,7 +22,7 @@
             <Rectangle.Fill >
                 <LinearGradientBrush  StartPoint="2,0" EndPoint="0,5">
                     <GradientStop Color="DarkRed" Offset="0.1"/>
-                    <GradientStop Color="DarkBlue" Offset="1.3"/>
+                    <GradientStop Color="DarkBlue" Offset="0.8"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
