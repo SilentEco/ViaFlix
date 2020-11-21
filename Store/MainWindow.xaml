@@ -86,7 +86,7 @@
                     </ScrollViewer>
 
                     <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" >
-                        <Grid Width="2000" ShowGridLines="True">
+                        <Grid Width="2000" ShowGridLines="True" Name="Action">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="100"/>
@@ -114,7 +114,7 @@
 
 
                     <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Visible" >
-                        <Grid Width="2000" ShowGridLines="True">
+                        <Grid Width="2000" ShowGridLines="True" Name="Comedy">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="100"/>
@@ -141,7 +141,7 @@
                     </ScrollViewer>
 
                     <ScrollViewer Grid.Row="3" HorizontalScrollBarVisibility="Visible" >
-                        <Grid Width="2000" ShowGridLines="True">
+                        <Grid Width="2000" ShowGridLines="True" Name="Romance">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="100"/>
@@ -168,7 +168,7 @@
                     </ScrollViewer>
 
                     <ScrollViewer Grid.Row="4" HorizontalScrollBarVisibility="Visible" >
-                        <Grid Width="2000" ShowGridLines="True">
+                        <Grid Width="2000" ShowGridLines="True" Name="Drama">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="100"/>
