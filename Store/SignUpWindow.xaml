@@ -44,11 +44,16 @@
 
             <StackPanel VerticalAlignment="Center" Margin="10">
 
+                <TextBox Name="NameSignUP" materialDesign:HintAssist.Hint="Name" 
+                         Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#5a7785" SelectionBrush="#5a7785" Foreground="Black"
+                         />
+                
                 <TextBox Name="UserNameSignUP" materialDesign:HintAssist.Hint="User name" 
                          Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
                          FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#5a7785" SelectionBrush="#5a7785" Foreground="Black"
                          />
-
+                
                 <PasswordBox Margin="0,10" Name="PasswordSignUP" materialDesign:HintAssist.Hint="Password" 
                              Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
                              FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#5a7785" SelectionBrush="#5a7785"

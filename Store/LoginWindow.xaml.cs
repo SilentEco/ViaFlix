@@ -26,7 +26,8 @@ namespace Store
 
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
-                State.User = API.GetCustomerByName(NameField.Text.Trim());
+                State.User = API.GetCustomerByUsername(NameField.Text.Trim());
+                State.User = API.GetCustomerByPassword(PasswordField.Password.Trim());
             if (State.User != null)
             {
                 var next_window = new MainWindow();
@@ -35,7 +36,7 @@ namespace Store
             }
             else
             {
-                MessageBox.Show("Please enter your username", "Error");
+                MessageBox.Show("Wrong username or password", "Error");
             }
         }
 

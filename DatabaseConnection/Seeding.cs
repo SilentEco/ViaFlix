@@ -16,12 +16,7 @@ namespace DatabaseConnection
                 ctx.RemoveRange(ctx.Movies);
                 ctx.RemoveRange(ctx.Customers);
 
-                ctx.AddRange(new List<Customer> {
-                    new Customer { Name = "Björn" },
-                    new Customer { Name = "Robin" },
-                    new Customer { Name = "Kalle" },
-                    new Customer { Name = "Anders" },
-                });
+               
 
                 var movies = new List<Movie>();
                 var lines = File.ReadAllLines(@"..\..\..\SeedData\MovieGenre.csv");
