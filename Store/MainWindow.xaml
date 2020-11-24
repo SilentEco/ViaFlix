@@ -19,6 +19,26 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+            <Grid>
+                <Label Content="Hej" Foreground="White"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            </Grid>
+
             <Rectangle Grid.Column="0">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -28,39 +48,36 @@
                 </Rectangle.Fill>
             </Rectangle>
 
-            <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Right">
-                <Grid Width="700" Height="2000" Background="Transparent" >
+            <ScrollViewer Grid.Column="2" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Right">
+                <Grid Width="700" Height="600" Background="Transparent" >
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
-                        <RowDefinition Height="100" />
+                        <RowDefinition Height="130" />
+                        <RowDefinition Height="130" />
+                        <RowDefinition Height="130" />
+                        <RowDefinition Height="130" />
+                        <RowDefinition Height="130" />
+                        <RowDefinition Height="130" />
+                        <RowDefinition Height="130" />
                     </Grid.RowDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Label Content="Hej" Width="100" Height="30" Background="White" Foreground="White"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                    </Grid>
 
                     <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Visible" Background="White" >
                         <Grid Width="2000" Name="MovieGrid">
+
                             <Grid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black" Offset="0.091"/>
                                     <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
@@ -79,20 +96,31 @@
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
                             </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
+
                         </Grid>
                     </ScrollViewer>
 
                     <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="White">
                         <Grid Width="2000" ShowGridLines="True" Name="Action">
+
                             <Grid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black" Offset="0.091"/>
                                     <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
+
+                            <TextBox HorizontalAlignment="Left" Width="82" Background="White" Text="Action" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" RenderTransformOrigin="0,1" Margin="34,50,0,0" TextAlignment="Center" FontSize="20">
+                                <TextBox.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform AngleY="-1.123"/>
+                                        <RotateTransform Angle="-90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </TextBox.RenderTransform>
+                            </TextBox>
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
@@ -111,18 +139,32 @@
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
                             </Grid.ColumnDefinitions>
+
                         </Grid>
                     </ScrollViewer>
 
 
                     <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Visible" Background="White" >
                         <Grid Width="2000" ShowGridLines="True" Name="Comedy">
+
                             <Grid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black" Offset="0.091"/>
                                     <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
+
+                            <TextBox HorizontalAlignment="Left" Width="82" Background="White" Text="Comedy" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" RenderTransformOrigin="0,1" Margin="34,50,0,0" TextAlignment="Center" FontSize="20">
+                                <TextBox.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform AngleY="-1.123"/>
+                                        <RotateTransform Angle="-90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </TextBox.RenderTransform>
+                            </TextBox>
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
@@ -141,17 +183,30 @@
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
                             </Grid.ColumnDefinitions>
+
                         </Grid>
                     </ScrollViewer>
 
                     <ScrollViewer Grid.Row="3" HorizontalScrollBarVisibility="Visible" Background="White" >
-                        <Grid Width="2000" ShowGridLines="True" Name="Romance">
+                        <Grid Width="2000" ShowGridLines="True" Name="Drama">
+
                             <Grid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black" Offset="0.091"/>
                                     <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
+
+                            <TextBox HorizontalAlignment="Left" Width="82" Background="White" Text="Drama" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" RenderTransformOrigin="0,1" Margin="34,50,0,0" TextAlignment="Center" FontSize="20">
+                                <TextBox.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <RotateTransform Angle="-90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </TextBox.RenderTransform>
+                            </TextBox>
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
@@ -170,17 +225,31 @@
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
                             </Grid.ColumnDefinitions>
+
                         </Grid>
                     </ScrollViewer>
 
                     <ScrollViewer Grid.Row="4" HorizontalScrollBarVisibility="Visible"  Background="White">
-                        <Grid Width="2000" ShowGridLines="True" Name="Drama">
+                        <Grid Width="2000" ShowGridLines="True" Name="Sci_fi">
+
                             <Grid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black" Offset="0.091"/>
                                     <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
+
+                            <TextBox HorizontalAlignment="Left" Width="82" Background="White" Text="Sci-fi" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" RenderTransformOrigin="0,1" Margin="34,50,0,0" TextAlignment="Center" FontSize="20">
+                                <TextBox.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform AngleY="-1.123"/>
+                                        <RotateTransform Angle="-90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </TextBox.RenderTransform>
+                            </TextBox>
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
@@ -199,16 +268,31 @@
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
                             </Grid.ColumnDefinitions>
+
                         </Grid>
                     </ScrollViewer>
+
                     <ScrollViewer Grid.Row="5" HorizontalScrollBarVisibility="Visible" Background="White">
-                        <Grid Width="2000" ShowGridLines="True">
+                        <Grid Width="2000" ShowGridLines="True" Name="Romance">
+
                             <Grid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black" Offset="0.091"/>
                                     <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
+
+                            <TextBox HorizontalAlignment="Left" Width="82" Background="White" Text="Romance" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" RenderTransformOrigin="0,1" Margin="34,50,0,0" TextAlignment="Center" FontSize="20">
+                                <TextBox.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform AngleY="-1.123"/>
+                                        <RotateTransform Angle="-90"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </TextBox.RenderTransform>
+                            </TextBox>
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
@@ -227,16 +311,20 @@
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
                             </Grid.ColumnDefinitions>
+
                         </Grid>
                     </ScrollViewer>
+
                     <ScrollViewer Grid.Row="6" HorizontalScrollBarVisibility="Visible" Background="White" >
                         <Grid Width="2000" ShowGridLines="True">
+
                             <Grid.Background>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                     <GradientStop Color="Black" Offset="0.091"/>
                                     <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
                                 </LinearGradientBrush>
                             </Grid.Background>
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
@@ -255,12 +343,14 @@
                                 <ColumnDefinition Width="133.333333333"/>
                                 <ColumnDefinition Width="133.333333333"/>
                             </Grid.ColumnDefinitions>
+
                         </Grid>
                     </ScrollViewer>
+                    
                 </Grid>
             </ScrollViewer>
+            
         </Grid>
-
     </StackPanel>
 
 </Window>
