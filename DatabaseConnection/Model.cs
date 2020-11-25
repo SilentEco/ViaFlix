@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DatabaseConnection;
+using Microsoft.Data.SqlClient;
 
 namespace DatabaseConnection
 {
     public class Customer
     {
+        
         public int Id { get; set; }
         public string Name { get; set; }
         public string Username { get; set; }
+        [FOREIGNKEY]
         public string Password { get; set; }
         public virtual List<Rental> Sales { get; set; }
     }
