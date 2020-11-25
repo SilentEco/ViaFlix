@@ -13,9 +13,9 @@ namespace DatabaseConnection
         {
             ctx = new Context();
         }
+
         public static List<Movie> GetMovieSlice(int a, int b)
         {
-            
             return ctx.Movies.OrderBy(m => m.Title).Skip(a).Take(b).ToList();
         }
         public static Customer GetCustomerByUsername(string Username)
