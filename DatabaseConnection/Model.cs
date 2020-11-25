@@ -12,7 +12,6 @@ namespace DatabaseConnection
         public int Id { get; set; }
         public string Name { get; set; }
         public string Username { get; set; }
-        [FOREIGNKEY]
         public string Password { get; set; }
         public virtual List<Rental> Sales { get; set; }
     }
