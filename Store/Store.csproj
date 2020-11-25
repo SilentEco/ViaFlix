@@ -46,4 +46,8 @@
     <ProjectReference Include="..\DatabaseConnection\DatabaseConnection.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SQLKOD\" />
+  </ItemGroup>
+
 </Project>
