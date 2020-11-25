@@ -8,19 +8,30 @@ namespace DatabaseConnection
 {
     public class API
     {
+        static Context ctx;
+            static API()
+        {
+            ctx = new Context();
+        }
         public static List<Movie> GetMovieSlice(int a, int b)
         {
-            using var ctx = new Context();
+            
             return ctx.Movies.OrderBy(m => m.Title).Skip(a).Take(b).ToList();
         }
-        public static Customer GetCustomerByName(string name)
+        public static Customer GetCustomerByUsername(string Username)
         {
-            using var ctx = new Context();
-            return ctx.Customers.FirstOrDefault(c => c.Name.ToLower() == name.ToLower());
+            
+            return ctx.Customers.FirstOrDefault(c => c.Username.ToLower() == Username.ToLower());
+        }
+
+        public static Customer GetCustomerByPassword(string password)
+        {
+            
+            return ctx.Customers.FirstOrDefault(c => c.Password.ToLower() == password.ToLower());
+
         }
         public static bool RegisterSale(Customer customer, Movie movie)
         {
-            using var ctx = new Context();
             try
             {
                 // Här säger jag åt contextet att inte oroa sig över innehållet i dessa records.

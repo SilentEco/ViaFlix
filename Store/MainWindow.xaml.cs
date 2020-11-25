@@ -43,8 +43,10 @@ namespace Store
                             image.HorizontalAlignment = HorizontalAlignment.Center;
                             image.VerticalAlignment = VerticalAlignment.Center;
                             image.Source = new BitmapImage(new Uri(movie.ImageURL));
-                            //image.Height = 120;
-                            image.Margin = new Thickness(4, 4, 4, 4);
+                            image.Height = 80;
+                            image.Width = 120;
+
+                           //image.Margin = new Thickness(2, 2, 2, 2);
 
                             MovieGrid.Children.Add(image);
                             Grid.SetRow(image, y);

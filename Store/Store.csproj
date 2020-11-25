@@ -13,12 +13,16 @@
     <None Remove="images\film-roll.png" />
     <None Remove="images\home.png" />
     <None Remove="images\LoginLogo.png" />
+    <None Remove="images\LoginLogo256.png" />
     <None Remove="images\video-camera.png" />
     <None Remove="images\worldwide %281%29.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="images\LoginLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\LoginLogo256.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
