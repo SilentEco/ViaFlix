@@ -30,6 +30,7 @@ namespace DatabaseConnection
             return ctx.Customers.FirstOrDefault(c => c.Password.ToLower() == password.ToLower());
 
         }
+
         public static bool RegisterSale(Customer customer, Movie movie)
         {
             try

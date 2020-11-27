@@ -46,7 +46,7 @@ namespace Store
                             image.Height = 80;
                             image.Width = 120;
 
-                           //image.Margin = new Thickness(2, 2, 2, 2);
+                           image.Margin = new Thickness(2, 2, 2, 2);
 
                             MovieGrid.Children.Add(image);
                             Grid.SetRow(image, y);
