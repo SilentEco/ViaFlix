@@ -1,7 +1,8 @@
-﻿<Window x:Class="Store.MainWindow"
+﻿<mah:MetroWindow x:Class="Store.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -38,16 +39,12 @@
                     <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                         Hello
                     </Label>
-                    
                 </Grid>
-                
-                
-
             </Grid>
 
             <ScrollViewer Grid.Column="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Left" HorizontalAlignment="Right">
                 <Border BorderBrush="Black" BorderThickness="2">
-                    <Grid Width="700" Height="780" Background="Transparent"  HorizontalAlignment="Left" >
+                    <Grid Width="700" Height="800" Background="Transparent"  HorizontalAlignment="Left" >
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="130" />
@@ -63,7 +60,7 @@
                             <Label Content="Higest Rated" Background="White" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
                             <ScrollViewer BorderBrush="Black" BorderThickness="30" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="White"  VerticalScrollBarVisibility="Disabled" Margin="0,0,16,0">
-                                <Grid Width="2000" Name="MovieGrid" >
+                                <Grid Width="2000" Name="MovieGrid" ShowGridLines="true">
 
                                     <Grid.Background>
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -327,4 +324,4 @@
         </Grid>
     </StackPanel>
 
-</Window>
+</mah:MetroWindow>
