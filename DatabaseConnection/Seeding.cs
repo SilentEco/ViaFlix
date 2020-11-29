@@ -23,10 +23,7 @@ namespace DatabaseConnection
                 var genre_lines = File.ReadAllLines(@"..\..\..\SeedData\MovieGenre.csv");
                 for (int i = 1; i < 200; i++)
                 {
-                    // imdbId   Imdb Link   Title   IMDB Score   Genre   Poster
-                    //   [0]       [1]       [2]       [3]        [4]     [5] 
-
-                    // Hämta image url
+                    // imdbId,Imdb Link,Title,IMDB Score,Genre,Poster
                     var cells = lines[i].Split(',');
                     var url = cells[5].Trim('"');
 
