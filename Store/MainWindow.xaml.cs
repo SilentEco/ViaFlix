@@ -13,20 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DatabaseConnection;
+using MahApps.Metro.Controls;
 
 namespace Store
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
             InitializeComponent();
 
             State.Movies = API.GetMovieSlice(0, 30);
-            for (int y = 0; y < MovieGrid.RowDefinitions.Count; y++)
+            for (int y = 1; y < 2; y++)
             {
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
@@ -35,8 +36,6 @@ namespace Store
                     {
                         var movie = State.Movies[i];
 
-                        try
-                        {
                             var image = new Image() { };
                             image.Cursor = Cursors.Hand;
                             image.MouseUp += Image_MouseUp;
@@ -46,19 +45,13 @@ namespace Store
                             image.Height = 80;
                             image.Width = 120;
 
-                           image.Margin = new Thickness(2, 2, 2, 2);
+                            image.Margin = new Thickness(2, 2, 2, 2);
 
                             MovieGrid.Children.Add(image);
+                            
                             Grid.SetRow(image, y);
                             Grid.SetColumn(image, x);
-                        }
-                        catch (Exception e) when 
-                            (e is ArgumentNullException || 
-                             e is System.IO.FileNotFoundException || 
-                             e is UriFormatException)
-                        {
-                            continue;
-                        }
+                      
                     }
                 }
             }
@@ -72,7 +65,7 @@ namespace Store
             int i = y * MovieGrid.ColumnDefinitions.Count + x;
             State.Pick = State.Movies[i];
 
-            if(API.RegisterSale(State.User, State.Pick))
+            if (API.RegisterSale(State.User, State.Pick))
                 MessageBox.Show("All is well and you can download your movie now.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
             else
                 MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
