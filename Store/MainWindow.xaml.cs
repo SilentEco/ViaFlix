@@ -25,6 +25,7 @@ namespace Store
         public MainWindow()
         {
             InitializeComponent();
+            LoggedinLbl();
 
             State.Movies = API.GetMovieSlice(0, 30);
             for (int y = 1; y < 2; y++)
@@ -70,5 +71,12 @@ namespace Store
             else
                 MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
+
+        public void LoggedinLbl()
+        {
+            Namelbl.Content = $"Logged in as {State.User.Username}";
+        }
+
+
     }
 }

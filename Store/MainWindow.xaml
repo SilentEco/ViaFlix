@@ -14,11 +14,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight" Background="Transparent">
     <StackPanel>
+
         <Grid Width="850" Height="500">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
             <Grid Grid.Column="0">
@@ -41,9 +42,8 @@
                         </Rectangle.Fill>
                     </Rectangle>
 
-                    <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        Hello
-                    </Label>
+                    <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Name="Namelbl" Foreground="#DDFFFFFF" />
+
                 </Grid>
             </Grid>
 
