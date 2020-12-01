@@ -4,10 +4,12 @@ using System.Text;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace DatabaseConnection
 {
-    class Seeding
+    public  class Seeding
     {
+        
         static void Main()
         {
             using (var ctx = new Context())
@@ -34,6 +36,7 @@ namespace DatabaseConnection
                     // Hoppa över alla icke-fungerande url:er
                     try { var test = new Uri(url); }
                     catch (Exception e) { continue; }
+                    
 
                     movies.Add(new Movie { Title = cells[2], ImageURL = url });
                 }

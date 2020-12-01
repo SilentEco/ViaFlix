@@ -47,7 +47,7 @@ namespace Store
                     var LoginWindow = new LoginWindow();
                     LoginWindow.Show();
                     this.Close();
-
+                    
                     Clear();
                 }
             }
