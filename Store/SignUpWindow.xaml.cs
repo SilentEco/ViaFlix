@@ -27,7 +27,7 @@ namespace Store
 
         private void WindowSignUp_Click(object sender, RoutedEventArgs e)
         {
-            if (UserNameSignUP.Text == "" || PasswordSignUP.Password == "" || NameSignUP.Text == "" || EmailSignup.Text == "")
+            if (UserNameSignUP.Text == "" || PasswordSignUP.Password == "" || NameSignUP.Text == "" || EmailSignup.Text == "" || AdressSignnup.Text == "")
                 MessageBox.Show("Please fill the requiered forms");
             else
             {
