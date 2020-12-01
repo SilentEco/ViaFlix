@@ -50,5 +50,10 @@ namespace Store
         {
             showSubmenu(GenrePanel);
         }
+
+        private void btnAction_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
