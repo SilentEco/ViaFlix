@@ -27,7 +27,7 @@ namespace Store
 
         private void WindowSignUp_Click(object sender, RoutedEventArgs e)
         {
-            if (UserNameSignUP.Text == "" || PasswordSignUP.Password == "" || NameSignUP.Text == "")
+            if (UserNameSignUP.Text == "" || PasswordSignUP.Password == "" || NameSignUP.Text == "" || EmailSignup.Text == "")
                 MessageBox.Show("Please fill the requiered forms");
             else
             {
@@ -39,6 +39,9 @@ namespace Store
                     sqlCmd.Parameters.AddWithValue(@"Name", NameSignUP.Text);
                     sqlCmd.Parameters.AddWithValue(@"Username", UserNameSignUP.Text);
                     sqlCmd.Parameters.AddWithValue(@"Password", PasswordSignUP.Password);
+                    sqlCmd.Parameters.AddWithValue(@"Phonenumber", PhonenumberSignup.Text);
+                    sqlCmd.Parameters.AddWithValue(@"Email", EmailSignup.Text);
+                    sqlCmd.Parameters.AddWithValue(@"Adress", AdressSignnup.Text);
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Registration complete");
                     var LoginWindow = new LoginWindow();

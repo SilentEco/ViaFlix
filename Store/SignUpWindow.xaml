@@ -32,13 +32,13 @@
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="120 " Foreground="White"
                    />
 
-        <Rectangle Width="200" Height="150" Fill="White" StrokeThickness="4" Margin="10" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
+        <Rectangle Width="200" Height="275" Fill="White" StrokeThickness="4" Margin="150,0,150,0" VerticalAlignment="Center" RadiusX="7.242" RadiusY="7.242">
             <Rectangle.Effect >
                 <DropShadowEffect BlurRadius="5" Color="Black" Direction="200" RenderingBias="Quality" ShadowDepth="1"/>
             </Rectangle.Effect>
         </Rectangle>
 
-        <Grid Width="200" Height="150" VerticalAlignment="Center">
+        <Grid Width="200" Height="275" VerticalAlignment="Center">
             <TextBlock FontFamily="Champagne &amp; Limousines" FontSize="12" Text="VIAFLIX SIGN UP" 
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
 
@@ -48,21 +48,33 @@
                          Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
                          FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#5a7785" SelectionBrush="#5a7785" Foreground="Black"
                          />
-                
+
                 <TextBox Name="UserNameSignUP" materialDesign:HintAssist.Hint="User name" 
                          Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
                          FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#5a7785" SelectionBrush="#5a7785" Foreground="Black"
                          />
-                
+
                 <PasswordBox Margin="0,10" Name="PasswordSignUP" materialDesign:HintAssist.Hint="Password" 
                              Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
                              FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#5a7785" SelectionBrush="#5a7785"
                              />
+                <TextBox Name="PhonenumberSignup" materialDesign:HintAssist.Hint="Phonenumber" 
+                         Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#5a7785" SelectionBrush="#5a7785" Foreground="Black"
+                         />
+                <TextBox Name="EmailSignup" materialDesign:HintAssist.Hint="Email" 
+                         Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#5a7785" SelectionBrush="#5a7785" Foreground="Black"
+                         />
+                <TextBox Name="AdressSignnup" materialDesign:HintAssist.Hint="Adress" 
+                         Margin="0,1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         FontFamily="Champagne &amp; Limousines" FontSize="10" CaretBrush="#5a7785" SelectionBrush="#5a7785" Foreground="Black"
+                         />
             </StackPanel>
         </Grid>
 
-        <Button VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
-                Margin="165" Height="20" Width="100" Content="SIGN UP" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
+        <Button VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
+                Margin="200,386,200,0" Height="20" Width="100" Content="SIGN UP" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
                 Click="WindowSignUp_Click" FontFamily="Arial" FontSize="10" Background='#560027' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal"
                 />
     </Grid>

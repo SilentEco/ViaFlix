@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,7 @@ namespace Store
     {
         public MainWindow()
         {
+            Movieslice();
             InitializeComponent();
             LoggedinLbl();
             HigestRated();
@@ -53,11 +55,14 @@ namespace Store
 
         public void LoggedinLbl()
         {
-            //Namelbl.Content = $"Logged in as  \n{State.User.Username}";
+            Namelbl.Content = $"Logged in as  \n{State.User.Username}";
         }
 
         public void ActionList()
         {
+            Seeding seeding = new Seeding();
+
+            
             State.Movies = API.GetMovieSlice(0, 30);
             for (int y = 1; y < 2; y++)
             {
@@ -248,6 +253,37 @@ namespace Store
             }
         }
 
+        public void Movieslice()
+        {
+            using (var ctx = new Context())
+            {
+                ctx.RemoveRange(ctx.Sales);
+                ctx.RemoveRange(ctx.Movies);
 
+
+                var movies = new List<Movie>();
+                var lines = File.ReadAllLines(@"..\..\..\..\DatabaseConnection\SeedData\MovieGenre.csv");
+                var genre_lines = File.ReadAllLines(@"..\..\..\..\DatabaseConnection\SeedData\MovieGenre.csv");
+                for (int i = 1; i < 200; i++)
+                {
+                    // imdbId,Imdb Link,Title,IMDB Score,Genre,Poster
+                    var cells = lines[i].Split(',');
+                    var url = cells[5].Trim('"');
+
+                    // Hämta film genres
+                    string[] genre_cells = genre_lines[i].Split(',');
+                    string genre = genre_cells[4];
+
+                    // Hoppa över alla icke-fungerande url:er
+                    try { var test = new Uri(url); }
+                    catch (Exception e) { continue; }
+
+                    movies.Add(new Movie { Title = cells[2], ImageURL = url });
+                }
+                ctx.AddRange(movies);
+
+                ctx.SaveChanges();
+            }
+        }
     }
 }
