@@ -47,8 +47,8 @@
                 </Grid>
             </Grid>
 
-            <ScrollViewer  Grid.Column="1" HorizontalScrollBarVisibility="Hidden" Background="White" VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Left" HorizontalAlignment="Right">
-                <Border BorderBrush="Black" BorderThickness="2" >
+            <ScrollViewer  Grid.Column="1" HorizontalScrollBarVisibility="Hidden" Background="#FF898989" VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Left" HorizontalAlignment="Right">
+                <Border BorderBrush="Black" BorderThickness="2" Height="782" >
                     <Grid Width="700" Height="800" Background="Transparent"  HorizontalAlignment="Left" >
 
                         <Grid.RowDefinitions>
@@ -60,17 +60,17 @@
                             <RowDefinition Height="130" />
                         </Grid.RowDefinitions>
 
-                        <Grid Grid.Row="0" Background="White" HorizontalAlignment="Left">
+                        <Grid Grid.Row="0" Background="Red" HorizontalAlignment="Left">
 
-                            <Label Content="Higest Rated" Background="White" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                            <Label Content="Higest Rated" Background="#FF898989" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer BorderBrush="Black" BorderThickness="30" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="White"  VerticalScrollBarVisibility="Disabled" Margin="0,0,16,0">
-                                <Grid Width="2000" Name="MovieGrid" ShowGridLines="true">
+                            <ScrollViewer  BorderBrush="Black" BorderThickness="30" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989"  VerticalScrollBarVisibility="Disabled" Margin="0,0,16,0">
+                                <Grid Width="2000" Name="MovieGrid" ShowGridLines="False">
 
                                     <Grid.Background>
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                             <GradientStop Color="Black" Offset="0.091"/>
-                                            <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
+                                            <GradientStop Color="#FF5B0606" Offset="0.922"/>
                                         </LinearGradientBrush>
                                     </Grid.Background>
 
@@ -106,15 +106,15 @@
 
 
                         <Grid Grid.Row="1" Background="White">
-                            <Label Content="Action" Background="White" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0" />
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="White" VerticalScrollBarVisibility="Disabled">
+                            <Label Content="Action" Background="#FF898989" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0" />
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled">
                                 <Border>
-                                    <Grid Width="2000" Name="Action" ShowGridLines="True">
+                                    <Grid Width="2000" Name="Action" ShowGridLines="False">
 
                                         <Grid.Background>
                                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                                 <GradientStop Color="Black" Offset="0.091"/>
-                                                <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
+                                                <GradientStop Color="#FF5B0606" Offset="0.922"/>
                                             </LinearGradientBrush>
                                         </Grid.Background>
 
@@ -151,15 +151,15 @@
 
 
                         <Grid Grid.Row="2" Background="White">
-                            <Label Content="Comedy" Background="White" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                            <Label Content="Comedy" Background="#FF898989" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="White" VerticalScrollBarVisibility="Disabled" >
-                                <Grid Width="2000" Name="Comedy" ShowGridLines="True">
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled" >
+                                <Grid Width="2000" Name="Comedy" ShowGridLines="False">
 
                                     <Grid.Background>
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                             <GradientStop Color="Black" Offset="0.091"/>
-                                            <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
+                                            <GradientStop Color="#FF5B0606" Offset="0.922"/>
                                         </LinearGradientBrush>
                                     </Grid.Background>
 
@@ -194,15 +194,15 @@
                         </Grid>
 
                         <Grid Grid.Row="3" Background="White">
-                            <Label Content="Drama" Background="White" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                            <Label Content="Drama" Background="#FF898989" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="White" VerticalScrollBarVisibility="Disabled" >
-                                <Grid Width="2000" Name="Drama" ShowGridLines="True">
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled" >
+                                <Grid Width="2000" Name="Drama" ShowGridLines="False">
 
                                     <Grid.Background>
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                             <GradientStop Color="Black" Offset="0.091"/>
-                                            <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
+                                            <GradientStop Color="#FF5B0606" Offset="0.922"/>
                                         </LinearGradientBrush>
                                     </Grid.Background>
 
@@ -237,15 +237,15 @@
                         </Grid>
 
                         <Grid Grid.Row="4" Background="White">
-                            <Label Content="Sci-fi" Background="White" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                            <Label Content="Sci-fi" Background="#FF898989" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="White" VerticalScrollBarVisibility="Disabled" >
-                                <Grid Width="2000" Name="Sci_fi" ShowGridLines="True">
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled" >
+                                <Grid Width="2000" Name="Sci_fi" ShowGridLines="False">
 
                                     <Grid.Background>
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                             <GradientStop Color="Black" Offset="0.091"/>
-                                            <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
+                                            <GradientStop Color="#FF5B0606" Offset="0.922"/>
                                         </LinearGradientBrush>
                                     </Grid.Background>
 
@@ -280,15 +280,15 @@
                         </Grid>
 
                         <Grid Grid.Row="5" Background="White">
-                            <Label Content="Romance" Background="White" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                            <Label Content="Romance" Background="#FF898989" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="White" VerticalScrollBarVisibility="Disabled">
-                                <Grid Width="2000" Name="Romance" ShowGridLines="True">
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled">
+                                <Grid Width="2000" Name="Romance" ShowGridLines="False">
 
                                     <Grid.Background>
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                             <GradientStop Color="Black" Offset="0.091"/>
-                                            <GradientStop Color="#FFDE5F5F" Offset="0.922"/>
+                                            <GradientStop Color="#FF5B0606" Offset="0.922"/>
                                         </LinearGradientBrush>
                                     </Grid.Background>
 

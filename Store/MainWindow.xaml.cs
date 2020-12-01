@@ -74,7 +74,7 @@ namespace Store
 
         public void LoggedinLbl()
         {
-            Namelbl.Content = $"Logged in as {State.User.Username}";
+            Namelbl.Content = $"Logged in as  \n{State.User.Username}";
         }
 
 
