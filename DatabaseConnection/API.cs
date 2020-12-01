@@ -21,13 +21,13 @@ namespace DatabaseConnection
         public static Customer GetCustomerByUsername(string Username)
         {
             
-            return ctx.Customers.FirstOrDefault(c => c.Username.ToLower() == Username.ToLower());
+            return ctx.Customers.FirstOrDefault(c => c.Username == Username);
         }
 
         public static Customer GetCustomerByPassword(string password)
         {
             
-            return ctx.Customers.FirstOrDefault(c => c.Password.ToLower() == password.ToLower());
+            return ctx.Customers.FirstOrDefault(c => c.Password== password);
 
         }
 
