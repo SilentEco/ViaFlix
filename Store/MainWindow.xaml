@@ -30,7 +30,9 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="1">
-                        <MyMenu:Dropdown2/>
+                        <Button VerticalAlignment="Bottom" Background="#FF560027" Foreground="White" Content="Logout" FontSize="12"  Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="{x:Null}" Click="Button_Click"/>
+                        <Button Content="Home" Foreground="White" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" VerticalAlignment="Top" Background="#FF560027" BorderBrush="{x:Null}" Width="150" Height="27" FontSize="12"/>
+                        <MyMenu:Dropdown2 Margin="0,28,0,181" />
                     </Grid>
 
                     <Rectangle Grid.Row="0">

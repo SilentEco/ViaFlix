@@ -252,7 +252,6 @@ namespace Store
                 }
             }
         }
-
         public void Movieslice()
         {
             using (var ctx = new Context())
@@ -284,6 +283,14 @@ namespace Store
 
                 ctx.SaveChanges();
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You've succesfully logged out", "Logged out");
+            var LogOut = new LoginWindow();
+            LogOut.Show();
+            this.Close();
         }
     }
 }

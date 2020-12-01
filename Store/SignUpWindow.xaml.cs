@@ -59,5 +59,11 @@ namespace Store
 
         }
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            var Back = new LoginWindow();
+            Back.Show();
+            this.Close();
+        }
     }
 }
