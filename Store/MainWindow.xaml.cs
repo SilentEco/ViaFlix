@@ -37,6 +37,7 @@ namespace Store
 
         }
 
+
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var x = Grid.GetColumn(sender as UIElement);
@@ -55,12 +56,15 @@ namespace Store
         {
             //Namelbl.Content = $"Logged in as  \n{State.User.Username}";
         }
-
         public void HigestRated()
         {
-            State.Movies = API.GetMovieSlice(0, 30);
-            for (int y = 1; y < 2; y++)
+            string[] genre_order = new string[] { "Action", "Romance", "Drama" };
+            List<Genre> genres = API.GetGenres();
+            for (int y = 0; y < genre_order.Length; y++)
             {
+                Genre genre = genres.FirstOrDefault(g => g.Genres == genre_order[y]);
+                List<Movie> movies_by_genre = genre.Movies;
+
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
                     int i = y * MovieGrid.ColumnDefinitions.Count + x;
@@ -84,169 +88,6 @@ namespace Store
                         Grid.SetRow(image, y);
                         Grid.SetColumn(image, x);
 
-                    }
-                }
-            }
-        }
-        public void GenreSort()
-        { 
-            if (State.Genre.Equals("Action"))
-            {
-                State.Movies = API.GetMovieSlice(0, 30);
-                for (int y = 1; y < 2; y++)
-                {
-                    for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
-                    {
-                        int i = y * MovieGrid.ColumnDefinitions.Count + x;
-                        if (i < State.Movies.Count)
-                        {
-                            var movie = State.Movies[i];
-
-                            var image = new Image() { };
-                            image.Cursor = Cursors.Hand;
-                            image.MouseUp += Image_MouseUp;
-                            image.HorizontalAlignment = HorizontalAlignment.Center;
-                            image.VerticalAlignment = VerticalAlignment.Center;
-                            image.Source = new BitmapImage(new Uri(movie.ImageURL));
-                            image.Height = 80;
-                            image.Width = 120;
-
-                            image.Margin = new Thickness(2, 2, 2, 2);
-
-                            Action.Children.Add(image);
-
-                            Grid.SetRow(image, y);
-                            Grid.SetColumn(image, x);
-
-                        }
-                    }
-                }
-            }
-            if (State.Genre.Equals(Comedy))
-            {
-                State.Movies = API.GetMovieSlice(0, 30);
-                for (int y = 1; y < 2; y++)
-                {
-                    for (int x = 0; x < Comedy.ColumnDefinitions.Count; x++)
-                    {
-                        int i = y * Comedy.ColumnDefinitions.Count + x;
-                        if (i < State.Movies.Count)
-                        {
-                            var movie = State.Movies[i];
-
-                            var image = new Image() { };
-                            image.Cursor = Cursors.Hand;
-                            image.MouseUp += Image_MouseUp;
-                            image.HorizontalAlignment = HorizontalAlignment.Center;
-                            image.VerticalAlignment = VerticalAlignment.Center;
-                            image.Source = new BitmapImage(new Uri(movie.ImageURL));
-                            image.Height = 80;
-                            image.Width = 120;
-
-                            image.Margin = new Thickness(2, 2, 2, 2);
-
-                            Comedy.Children.Add(image);
-
-                            Grid.SetRow(image, y);
-                            Grid.SetColumn(image, x);
-
-                        }
-                    }
-                }
-            }
-            if (State.Genre.Equals(Drama))
-            {
-                State.Movies = API.GetMovieSlice(0, 30);
-                for (int y = 1; y < 2; y++)
-                {
-                    for (int x = 0; x < Drama.ColumnDefinitions.Count; x++)
-                    {
-                        int i = y * Drama.ColumnDefinitions.Count + x;
-                        if (i < State.Movies.Count)
-                        {
-                            var movie = State.Movies[i];
-
-                            var image = new Image() { };
-                            image.Cursor = Cursors.Hand;
-                            image.MouseUp += Image_MouseUp;
-                            image.HorizontalAlignment = HorizontalAlignment.Center;
-                            image.VerticalAlignment = VerticalAlignment.Center;
-                            image.Source = new BitmapImage(new Uri(movie.ImageURL));
-                            image.Height = 80;
-                            image.Width = 120;
-
-                            image.Margin = new Thickness(2, 2, 2, 2);
-                            Drama.Children.Add(image);
-
-                            Grid.SetRow(image, y);
-                            Grid.SetColumn(image, x);
-
-                        }
-                    }
-                }
-            }
-            if (State.Genre.Equals(Romance))
-            {
-                State.Movies = API.GetMovieSlice(0, 30);
-                for (int y = 1; y < 2; y++)
-                {
-                    for (int x = 0; x < Romance.ColumnDefinitions.Count; x++)
-                    {
-                        int i = y * Romance.ColumnDefinitions.Count + x;
-                        if (i < State.Movies.Count)
-                        {
-                            var movie = State.Movies[i];
-
-                            var image = new Image() { };
-                            image.Cursor = Cursors.Hand;
-                            image.MouseUp += Image_MouseUp;
-                            image.HorizontalAlignment = HorizontalAlignment.Center;
-                            image.VerticalAlignment = VerticalAlignment.Center;
-                            image.Source = new BitmapImage(new Uri(movie.ImageURL));
-                            image.Height = 80;
-                            image.Width = 120;
-
-                            image.Margin = new Thickness(2, 2, 2, 2);
-
-                            Romance.Children.Add(image);
-
-                            Grid.SetRow(image, y);
-                            Grid.SetColumn(image, x);
-
-                        }
-                    }
-                }
-            }
-            if (State.Genre.Equals(Sci_fi))
-            {
-
-                State.Movies = API.GetMovieSlice(0, 30);
-                for (int y = 1; y < 2; y++)
-                {
-                    for (int x = 0; x < Sci_fi.ColumnDefinitions.Count; x++)
-                    {
-                        int i = y * Sci_fi.ColumnDefinitions.Count + x;
-                        if (i < State.Movies.Count)
-                        {
-                            var movie = State.Movies[i];
-
-                            var image = new Image() { };
-                            image.Cursor = Cursors.Hand;
-                            image.MouseUp += Image_MouseUp;
-                            image.HorizontalAlignment = HorizontalAlignment.Center;
-                            image.VerticalAlignment = VerticalAlignment.Center;
-                            image.Source = new BitmapImage(new Uri(movie.ImageURL));
-                            image.Height = 80;
-                            image.Width = 120;
-
-                            image.Margin = new Thickness(2, 2, 2, 2);
-
-                            Sci_fi.Children.Add(image);
-
-                            Grid.SetRow(image, y);
-                            Grid.SetColumn(image, x);
-
-                        }
                     }
                 }
             }

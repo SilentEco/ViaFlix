@@ -14,6 +14,10 @@ namespace DatabaseConnection
             ctx = new Context();
         }
 
+        public static List<Genre> GetGenres()
+        {
+            return ctx.Genres.ToList();
+        }
         public static List<Movie> GetMovieSlice(int a, int b)
         {
             return ctx.Movies.OrderBy(m => m.Title).Skip(a).Take(b).ToList();
