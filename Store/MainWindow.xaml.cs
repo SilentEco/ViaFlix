@@ -64,11 +64,10 @@ namespace Store
 
             
             State.Movies = API.GetMovieSlice(0, 30);
-            for (int y = 1; y < 2; y++)
-            {
+           
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
-                    int i = y * MovieGrid.ColumnDefinitions.Count + x;
+                    int i =  MovieGrid.ColumnDefinitions.Count + x;
                     if (i < State.Movies.Count)
                     {
                         var movie = State.Movies[i];
@@ -86,21 +85,20 @@ namespace Store
 
                         Action.Children.Add(image);
 
-                        Grid.SetRow(image, y);
+                        //Grid.SetRow(image, y);
                         Grid.SetColumn(image, x);
 
                     }
                 }
-            }
+           
         }
         public void HigestRated()
         {
             State.Movies = API.GetMovieSlice(0, 30);
-            for (int y = 1; y < 2; y++)
-            {
+            
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
-                    int i = y * MovieGrid.ColumnDefinitions.Count + x;
+                    int i = MovieGrid.ColumnDefinitions.Count + x;
                     if (i < State.Movies.Count)
                     {
                         var movie = State.Movies[i];
@@ -118,21 +116,20 @@ namespace Store
 
                         MovieGrid.Children.Add(image);
 
-                        Grid.SetRow(image, y);
+                       
                         Grid.SetColumn(image, x);
 
                     }
                 }
-            }
+            
         }
         public void ComedyList()
         {
             State.Movies = API.GetMovieSlice(0, 30);
-            for (int y = 1; y < 2; y++)
-            {
+            
                 for (int x = 0; x < Comedy.ColumnDefinitions.Count; x++)
                 {
-                    int i = y * Comedy.ColumnDefinitions.Count + x;
+                    int i = Comedy.ColumnDefinitions.Count + x;
                     if (i < State.Movies.Count)
                     {
                         var movie = State.Movies[i];
@@ -150,21 +147,20 @@ namespace Store
 
                         Comedy.Children.Add(image);
 
-                        Grid.SetRow(image, y);
+                        
                         Grid.SetColumn(image, x);
 
                     }
                 }
-            }
+            
         }
         public void DramaList()
         {
             State.Movies = API.GetMovieSlice(0, 30);
-            for (int y = 1; y < 2; y++)
-            {
+           
                 for (int x = 0; x < Drama.ColumnDefinitions.Count; x++)
                 {
-                    int i = y * Drama.ColumnDefinitions.Count + x;
+                    int i = Drama.ColumnDefinitions.Count + x;
                     if (i < State.Movies.Count)
                     {
                         var movie = State.Movies[i];
@@ -181,21 +177,20 @@ namespace Store
                         image.Margin = new Thickness(2, 2, 2, 2);
                         Drama.Children.Add(image);
 
-                        Grid.SetRow(image, y);
+                        
                         Grid.SetColumn(image, x);
 
                     }
                 }
-            }
+            
         }
         public void RomanceList() 
         {
             State.Movies = API.GetMovieSlice(0, 30);
-            for (int y = 1; y < 2; y++)
-            {
+           
                 for (int x = 0; x < Romance.ColumnDefinitions.Count; x++)
                 {
-                    int i = y * Romance.ColumnDefinitions.Count + x;
+                    int i = Romance.ColumnDefinitions.Count + x;
                     if (i < State.Movies.Count)
                     {
                         var movie = State.Movies[i];
@@ -213,21 +208,20 @@ namespace Store
 
                         Romance.Children.Add(image);
 
-                        Grid.SetRow(image, y);
+                        
                         Grid.SetColumn(image, x);
 
                     }
                 }
-            }
+            
         }
         public void ScifiList() 
         {
             State.Movies = API.GetMovieSlice(0, 30);
-            for (int y = 1; y < 2; y++)
-            {
+            
                 for (int x = 0; x < Sci_fi.ColumnDefinitions.Count; x++)
                 {
-                    int i = y * Sci_fi.ColumnDefinitions.Count + x;
+                    int i =  Sci_fi.ColumnDefinitions.Count + x;
                     if (i < State.Movies.Count)
                     {
                         var movie = State.Movies[i];
@@ -245,12 +239,12 @@ namespace Store
 
                         Sci_fi.Children.Add(image);
 
-                        Grid.SetRow(image, y);
+                        
                         Grid.SetColumn(image, x);
 
                     }
                 }
-            }
+            
         }
         public void Movieslice()
         {
@@ -286,17 +280,31 @@ namespace Store
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+  
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Rentedmovies.Visibility == Visibility.Visible)
+                Rentedmovies.Visibility = Visibility.Hidden;
+
+            if (ActionPageTest.Visibility == Visibility.Visible)
+                ActionPageTest.Visibility = Visibility.Hidden;
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("You've succesfully logged out", "Logged out");
             var LogOut = new LoginWindow();
             LogOut.Show();
             this.Close();
+
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void RentedMoviebtn_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Rentedmovies.Visibility == Visibility.Hidden)
+                Rentedmovies.Visibility = Visibility.Visible;
+            else
+                Rentedmovies.Visibility = Visibility.Hidden;
         }
     }
 }

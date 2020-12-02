@@ -30,10 +30,11 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="1">
-                        <Button VerticalAlignment="Bottom" Background="#FF560027" Foreground="White" Content="Logout" FontSize="12"  Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="{x:Null}" Click="Button_Click" FontFamily="Arial"/>
-                        <Button VerticalAlignment="Bottom" Background="#FF560027" Content="RENTED MOVIES" FontSize="12" Margin="0,0,0,35" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" FontFamily="Arial" BorderBrush="{x:Null}" Click="Button_Click_1" />
-                        <Button Content="Home" Foreground="White" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" VerticalAlignment="Top" Background="#FF560027" BorderBrush="{x:Null}" Width="150" Height="27" FontSize="12" FontFamily="Arial"/>
+                        <Button x:Name="LogoutButton" VerticalAlignment="Bottom" Background="#FF560027" Foreground="White" Content="Logout" FontSize="12"  Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="{x:Null}" FontFamily="Arial" Click="LogoutButton_Click"/>
+                        <Button x:Name="RentedMoviebtn" VerticalAlignment="Bottom" Background="#FF560027" Content="RENTED MOVIES" FontSize="12" Margin="0,0,0,35" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" FontFamily="Arial" BorderBrush="{x:Null}" Click="RentedMoviebtn_Click" />
+                        <Button x:Name="HomeButton" Content="Home" Foreground="White" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" VerticalAlignment="Top" Background="#FF560027" BorderBrush="{x:Null}" Width="150" Height="27" FontSize="12" FontFamily="Arial" Click="HomeButton_Click" />
                         <MyMenu:Dropdown2 Margin="0,28,0,181" x:Name="Dropdown2"/>
+                        
                     </Grid>
 
                     <Rectangle Grid.Row="0">
@@ -331,6 +332,7 @@
             
             <Grid Grid.Column="1" >
                 <MyMenu:ActionPage Visibility="Hidden" x:Name="ActionPageTest"/>
+                <MyMenu:RentedMovies x:Name="Rentedmovies" Visibility="Hidden"/>
             </Grid>
             
         </Grid>

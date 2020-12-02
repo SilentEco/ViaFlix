@@ -16,7 +16,7 @@ namespace Store.UserControl
     /// <summary>
     /// Interaction logic for RentedMovies.xaml
     /// </summary>
-    public partial class RentedMovies : UserControl
+    public partial class RentedMovies
     {
         public RentedMovies()
         {
