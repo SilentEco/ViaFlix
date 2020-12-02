@@ -20,14 +20,14 @@ namespace DatabaseConnection
         public int Id { get; set; }
         public string Title { get; set; }
         public string ImageURL { get; set; }
-        public List<Genres> Genres { get; set; }
+        public virtual List<Genre> Genres { get; set; }
         public virtual List<Rental> Sales { get; set; }
     }
-    public class Genres
+    public class Genre
     {
         public int Id { get; set; }
-        public string Genre { get; set; }
-        public List<Movie> Movies { get; set; }
+        public string Genres { get; set; }
+        public virtual List<Movie> Movies { get; set; }
     }
     public class Rental
     {

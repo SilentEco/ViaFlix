@@ -88,9 +88,9 @@ namespace Store
                 }
             }
         }
-        public void GenreSort(Movie getgenre)
-        {
-            if (Genres.Genre == "Action")
+        public void GenreSort()
+        { 
+            if (State.Genre.Equals("Action"))
             {
                 State.Movies = API.GetMovieSlice(0, 30);
                 for (int y = 1; y < 2; y++)
@@ -122,7 +122,7 @@ namespace Store
                     }
                 }
             }
-            if (Genres.Genre == "Comedy")
+            if (State.Genre.Equals(Comedy))
             {
                 State.Movies = API.GetMovieSlice(0, 30);
                 for (int y = 1; y < 2; y++)
@@ -154,7 +154,7 @@ namespace Store
                     }
                 }
             }
-            if (Genres.Genre == "Drama")
+            if (State.Genre.Equals(Drama))
             {
                 State.Movies = API.GetMovieSlice(0, 30);
                 for (int y = 1; y < 2; y++)
@@ -185,7 +185,7 @@ namespace Store
                     }
                 }
             }
-            if (Genres.Genre == "Romance")
+            if (State.Genre.Equals(Romance))
             {
                 State.Movies = API.GetMovieSlice(0, 30);
                 for (int y = 1; y < 2; y++)
@@ -217,7 +217,7 @@ namespace Store
                     }
                 }
             }
-            if (Genres.Genre == "Sci-Fi")
+            if (State.Genre.Equals(Sci_fi))
             {
 
                 State.Movies = API.GetMovieSlice(0, 30);
