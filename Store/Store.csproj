@@ -64,17 +64,10 @@
     <Compile Update="UserControl\Dropdown2.0.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserControl\DropdownMenu.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <Page Update="UserControl\Dropdown2.0.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="UserControl\DropdownMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>

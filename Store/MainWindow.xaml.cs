@@ -26,7 +26,10 @@ namespace Store
         public MainWindow()
         {
             Movieslice();
+
             InitializeComponent();
+            Dropdown2.InitializeActionMenues(ActionPageTest);
+
             LoggedinLbl();
             HigestRated();
             ActionList();
@@ -34,9 +37,6 @@ namespace Store
             DramaList();
             ComedyList();
             ScifiList();
-            
-            
-
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
@@ -256,8 +256,9 @@ namespace Store
         {
             using (var ctx = new Context())
             {
-                ctx.RemoveRange(ctx.Sales);
+                
                 ctx.RemoveRange(ctx.Movies);
+                ctx.RemoveRange(ctx.Sales);
 
 
                 var movies = new List<Movie>();
@@ -291,6 +292,11 @@ namespace Store
             var LogOut = new LoginWindow();
             LogOut.Show();
             this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

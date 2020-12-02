@@ -11,18 +11,27 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Store
+namespace Store.UserControl
 {
     /// <summary>
     /// Interaction logic for Dropdown2.xaml
     /// </summary>
-    public partial class Dropdown2 : UserControl
+    public partial class Dropdown2
     {
+        private ActionPage ActionGenre;
+
         public Dropdown2()
         {
             InitializeComponent();
             customeDesign();
         }
+
+        public void InitializeActionMenues(ActionPage ActionGenre)
+        {
+            this.ActionGenre = ActionGenre;
+            ActionGenre.Visibility = Visibility.Hidden;
+        }
+
         private void customeDesign()
         {
             GenrePanel.Visibility = Visibility.Hidden;
@@ -53,7 +62,10 @@ namespace Store
 
         private void btnAction_Click(object sender, RoutedEventArgs e)
         {
-            
+            if(ActionGenre.Visibility == Visibility.Hidden)
+                ActionGenre.Visibility = Visibility.Visible;
+            else
+                ActionGenre.Visibility = Visibility.Hidden;
         }
     }
 }

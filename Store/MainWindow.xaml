@@ -9,7 +9,7 @@
         TextElement.FontWeight="Medium"
         TextElement.FontSize="14"
         FontFamily="{materialDesign:MaterialDesignFont}"
-        xmlns:MyMenu="clr-namespace:Store"
+        xmlns:MyMenu="clr-namespace:Store.UserControl"
          
         mc:Ignorable="d"
         Title="MainWindow" Width="850" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" SizeToContent="WidthAndHeight" Background="Transparent">
@@ -30,9 +30,10 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="1">
-                        <Button VerticalAlignment="Bottom" Background="#FF560027" Foreground="White" Content="Logout" FontSize="12"  Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="{x:Null}" Click="Button_Click"/>
-                        <Button Content="Home" Foreground="White" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" VerticalAlignment="Top" Background="#FF560027" BorderBrush="{x:Null}" Width="150" Height="27" FontSize="12"/>
-                        <MyMenu:Dropdown2 Margin="0,28,0,181" />
+                        <Button VerticalAlignment="Bottom" Background="#FF560027" Foreground="White" Content="Logout" FontSize="12"  Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="{x:Null}" Click="Button_Click" FontFamily="Arial"/>
+                        <Button VerticalAlignment="Bottom" Background="#FF560027" Content="RENTED MOVIES" FontSize="12" Margin="0,0,0,35" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" FontFamily="Arial" BorderBrush="{x:Null}" Click="Button_Click_1" />
+                        <Button Content="Home" Foreground="White" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" VerticalAlignment="Top" Background="#FF560027" BorderBrush="{x:Null}" Width="150" Height="27" FontSize="12" FontFamily="Arial"/>
+                        <MyMenu:Dropdown2 Margin="0,28,0,181" x:Name="Dropdown2"/>
                     </Grid>
 
                     <Rectangle Grid.Row="0">
@@ -48,7 +49,7 @@
 
                 </Grid>
             </Grid>
-
+            
             <ScrollViewer  Grid.Column="1" HorizontalScrollBarVisibility="Hidden" Background="#FF898989" VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Left" HorizontalAlignment="Right">
                 <Border BorderBrush="Black" BorderThickness="2" Height="782" >
                     <Grid Width="700" Height="800" Background="Transparent"  HorizontalAlignment="Left" >
@@ -327,7 +328,11 @@
                     </Grid>
                 </Border>
             </ScrollViewer>
-
+            
+            <Grid Grid.Column="1" >
+                <MyMenu:ActionPage Visibility="Hidden" x:Name="ActionPageTest"/>
+            </Grid>
+            
         </Grid>
     </StackPanel>
 
