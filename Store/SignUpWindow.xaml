@@ -74,11 +74,11 @@
         </Grid>
 
         <Button VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
-                Margin="150,382,250,0" Height="20" Width="100" Content="SIGN UP" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
+                Margin="250,382,150,0" Height="20" Width="100" Content="SIGN UP" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
                 Click="WindowSignUp_Click" FontFamily="Arial" FontSize="10" Background='#560027' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal"
                 />
         <Button Name="BackButton" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
-                Margin="250,382,150,0" Height="20" Width="100" Content="BACK" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
+                Margin="150,382,250,0" Height="20" Width="100" Content="BACK" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
                  FontFamily="Arial" FontSize="10" Background='#560027' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal" Click="BackButton_Click"
                 />
     </Grid>

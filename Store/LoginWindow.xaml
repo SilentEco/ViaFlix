@@ -17,7 +17,7 @@
         <Rectangle Height="500" Width="800" VerticalAlignment="Bottom">
 
         </Rectangle>
-        
+
         <Rectangle Height="250"  Width="800" VerticalAlignment="Top">
             <Rectangle.Fill >
                 <LinearGradientBrush  StartPoint="2,0" EndPoint="0,5">
@@ -57,15 +57,15 @@
         </Grid>
 
         <Button VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
-                Margin="0,0,100,165" Height="20" Width="100" Content="LOGIN" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
+                Margin="400,0,300,168" Height="20" Width="100" Content="LOGIN" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
                 Click="LogIn_Click" FontFamily="Arial" FontSize="10" Background='#560027' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal"
                 />
         <Button VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
-                Margin="100,0,0,165" Height="20" Width="100" Content="SIGN UP" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
+                Margin="300,0,400,168" Height="20" Width="100" Content="SIGN UP" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
                 Click="SignUp_Click" FontFamily="Arial" FontSize="10" Background='#560027' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal"
                 />
     </Grid>
-    
+
 
 
 

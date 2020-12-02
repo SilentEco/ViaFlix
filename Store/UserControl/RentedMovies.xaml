@@ -18,7 +18,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <ScrollViewer Grid.Column="0" FlowDirection="RightToLeft">
-            <Grid Name="RentedMovieGrid" ShowGridLines="True" Height="1000">
+            <Grid Name="RentedMovieGrid" ShowGridLines="False" Height="1000">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
                     <RowDefinition Height="100"/>
@@ -39,18 +39,18 @@
             </Grid>
         </ScrollViewer>
 
-        <Grid Grid.Column="1" ShowGridLines="True">
+        <Grid Grid.Column="1" ShowGridLines="False">
             <Grid.RowDefinitions >
                 <RowDefinition Height="50"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
-            <Grid Grid.Row="0">
-                <TextBox Foreground='White' Text="" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Name="RentBox"/>
+
+            <Grid Grid.Row="0" >
+                <TextBox Foreground='White' Text="" IsReadOnly="True" FontSize="25" Name="RentBox" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </Grid>
-            
+
             <Grid Grid.Row="1">
-                
+
             </Grid>
         </Grid>
     </Grid>
