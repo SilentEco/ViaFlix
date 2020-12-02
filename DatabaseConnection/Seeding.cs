@@ -19,6 +19,7 @@ namespace DatabaseConnection
 
 
                 var movies = new List<Movie>();
+                var genres = new List<Genres>();
                 var lines = File.ReadAllLines(@"..\..\..\SeedData\MovieGenre.csv");
                 var genre_lines = File.ReadAllLines(@"..\..\..\SeedData\MovieGenre.csv");
                 for (int i = 1; i < 200; i++)
@@ -35,9 +36,11 @@ namespace DatabaseConnection
                     try { var test = new Uri(url); }
                     catch (Exception e) { continue; }
 
-                    movies.Add(new Movie { Title = cells[2], ImageURL = url });
+                    movies.Add(new Movie { Title = cells[2], ImageURL = url});
+                    genres.Add(new Genres { Genre = genre });
                 }
                 ctx.AddRange(movies);
+                ctx.AddRange(genres);
 
                 ctx.SaveChanges();
 

@@ -8,6 +8,7 @@ namespace DatabaseConnection
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Rental> Sales { get; set; }
+        public DbSet<Genres> Genres { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
