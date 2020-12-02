@@ -6,19 +6,21 @@
              xmlns:local="clr-namespace:Store.UserControl"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="RentedMovie">
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FF5B0606" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
+    <Grid x:Name="RentedMovie" ShowGridLines="True">
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="130"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ScrollViewer Grid.Column="0" FlowDirection="RightToLeft">
+        <ScrollViewer Grid.Column="0" FlowDirection="RightToLeft" Background="#FFE2E2E2">
+            
             <Grid Name="RentedMovieGrid" ShowGridLines="False" Height="1000">
+                <Grid.Background >
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF5B0606" Offset="0.3"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
                     <RowDefinition Height="100"/>
@@ -53,5 +55,11 @@
 
             </Grid>
         </Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF5B0606" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
     </Grid>
 </UserControl>

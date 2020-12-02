@@ -50,8 +50,8 @@
 
                 </Grid>
             </Grid>
-            
-            <ScrollViewer  Grid.Column="1" HorizontalScrollBarVisibility="Hidden" Background="#FF898989" VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Left" HorizontalAlignment="Right">
+
+            <ScrollViewer  Grid.Column="1" HorizontalScrollBarVisibility="Hidden" Background="#FFE2E2E2" VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Left" HorizontalAlignment="Right">
                 <Border BorderBrush="Black" BorderThickness="2" Height="782" >
                     <Grid Width="700" Height="800" Background="Transparent"  HorizontalAlignment="Left" >
 
@@ -66,9 +66,9 @@
 
                         <Grid Grid.Row="0" Background="Red" HorizontalAlignment="Left">
 
-                            <Label Content="Higest Rated" Background="#FF898989" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                            <Label Content="Higest Rated" Background="#FFE2E2E2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer  BorderBrush="Black" BorderThickness="30" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989"  VerticalScrollBarVisibility="Disabled" Margin="0,0,16,0">
+                            <ScrollViewer  BorderBrush="Black" BorderThickness="30" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2"  VerticalScrollBarVisibility="Disabled" Margin="0,0,16,0">
                                 <Grid Width="2000" Name="MovieGrid" ShowGridLines="False">
 
                                     <Grid.Background>
@@ -110,8 +110,8 @@
 
 
                         <Grid Grid.Row="1" Background="White">
-                            <Label Content="Action" Background="#FF898989" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0" />
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled">
+                            <Label Content="Action" Background="#FFE2E2E2" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0" />
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled">
                                 <Border>
                                     <Grid Width="2000" Name="Action" ShowGridLines="False">
 
@@ -155,9 +155,9 @@
 
 
                         <Grid Grid.Row="2" Background="White">
-                            <Label Content="Comedy" Background="#FF898989" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                            <Label Content="Comedy" Background="#FFE2E2E2" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled" >
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled" >
                                 <Grid Width="2000" Name="Comedy" ShowGridLines="False">
 
                                     <Grid.Background>
@@ -197,10 +197,10 @@
 
                         </Grid>
 
-                        <Grid Grid.Row="3" Background="White">
-                            <Label Content="Drama" Background="#FF898989" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                        <Grid Grid.Row="3" Background="#FFE2E2E2">
+                            <Label Content="Drama" Background="#FFE2E2E2" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled" >
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled" >
                                 <Grid Width="2000" Name="Drama" ShowGridLines="False">
 
                                     <Grid.Background>
@@ -240,10 +240,10 @@
 
                         </Grid>
 
-                        <Grid Grid.Row="4" Background="White">
-                            <Label Content="Sci-fi" Background="#FF898989" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                        <Grid Grid.Row="4" Background="#FFE2E2E2">
+                            <Label Content="Sci-fi" Background="#FFE2E2E2" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled" >
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled" >
                                 <Grid Width="2000" Name="Sci_fi" ShowGridLines="False">
 
                                     <Grid.Background>
@@ -283,10 +283,10 @@
 
                         </Grid>
 
-                        <Grid Grid.Row="5" Background="White">
-                            <Label Content="Romance" Background="#FF898989" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
+                        <Grid Grid.Row="5" Background="#FFE2E2E2">
+                            <Label Content="Romance" Background="#FFE2E2E2" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
-                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FF898989" VerticalScrollBarVisibility="Disabled">
+                            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled">
                                 <Grid Width="2000" Name="Romance" ShowGridLines="False">
 
                                     <Grid.Background>

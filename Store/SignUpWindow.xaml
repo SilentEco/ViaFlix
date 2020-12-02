@@ -20,9 +20,9 @@
 
         <Rectangle Height="250"  Width="500" VerticalAlignment="Top">
             <Rectangle.Fill >
-                <LinearGradientBrush  StartPoint="2,0" EndPoint="0,5">
-                    <GradientStop Color="DarkRed" Offset="0.1"/>
-                    <GradientStop Color="DarkBlue" Offset="0.8"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF5B0606" Offset="0.8"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
