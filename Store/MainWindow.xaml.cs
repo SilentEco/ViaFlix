@@ -25,7 +25,7 @@ namespace Store
     {
         public MainWindow()
         {
-            Movieslice();
+          //  Movieslice();
 
             InitializeComponent();
             Dropdown2.InitializeActionMenues(ActionPageTest);
@@ -246,7 +246,7 @@ namespace Store
                 }
             
         }
-        public void Movieslice()
+     /*   public void Movieslice()
         {
             using (var ctx = new Context())
             {
@@ -279,7 +279,7 @@ namespace Store
                 ctx.SaveChanges();
             }
         }
-
+     */
   
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {

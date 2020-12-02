@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseConnection;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,43 @@ namespace Store.UserControl
         public RentedMovies()
         {
             InitializeComponent();
+            MoviesRented();
+            RentedMovieText();
+        }
+
+        public void MoviesRented()
+        {
+
+            State.Movies = API.GetMovieSlice(0, 30);
+
+            for (int y = 0; y < RentedMovieGrid.RowDefinitions.Count; y++)
+            {
+                int i = RentedMovieGrid.RowDefinitions.Count + y;
+                if (i < State.Movies.Count)
+                {
+                    var movie = State.Movies[i];
+
+                    var image = new Image() { };
+                    image.HorizontalAlignment = HorizontalAlignment.Center;
+                    image.VerticalAlignment = VerticalAlignment.Center;
+                    image.Source = new BitmapImage(new Uri(movie.ImageURL));
+                    image.Height = 80;
+                    image.Width = 120;
+
+                    image.Margin = new Thickness(2, 2, 2, 2);
+
+                    RentedMovieGrid.Children.Add(image);
+
+
+                    Grid.SetRow(image, y);
+
+                }
+            }
+        }
+
+        public void RentedMovieText()
+        {
+            RentBox.Text = $"Hello {State.User.Name}, this is the movies you picked! ";
         }
     }
 }
