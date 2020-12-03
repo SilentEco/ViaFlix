@@ -24,6 +24,7 @@ namespace Store.UserControl
             InitializeComponent();
             MoviesRented();
             RentedMovieText();
+            TextBoxtest();
         }
 
         public void MoviesRented()
@@ -54,6 +55,11 @@ namespace Store.UserControl
 
                 }
             }
+        }
+
+        public void TextBoxtest()
+        {
+            TestBox.Text = $"Hello {State.User.Movie.Title}";
         }
 
         public void RentedMovieText()

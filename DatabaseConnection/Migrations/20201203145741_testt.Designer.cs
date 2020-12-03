@@ -4,14 +4,16 @@ using DatabaseConnection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20201203145741_testt")]
+    partial class testt
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -99,11 +101,9 @@ namespace DatabaseConnection.Migrations
 
             modelBuilder.Entity("DatabaseConnection.Customer", b =>
                 {
-                    b.HasOne("DatabaseConnection.Movie", "Movie")
-                        .WithMany()
+                    b.HasOne("DatabaseConnection.Movie", null)
+                        .WithMany("Customers")
                         .HasForeignKey("MovieId");
-
-                    b.Navigation("Movie");
                 });
 
             modelBuilder.Entity("DatabaseConnection.Rental", b =>
@@ -128,6 +128,8 @@ namespace DatabaseConnection.Migrations
 
             modelBuilder.Entity("DatabaseConnection.Movie", b =>
                 {
+                    b.Navigation("Customers");
+
                     b.Navigation("Sales");
                 });
 #pragma warning restore 612, 618

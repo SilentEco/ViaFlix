@@ -4,14 +4,16 @@ using DatabaseConnection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20201203094131_retnedmovie")]
+    partial class retnedmovie
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,9 +34,6 @@ namespace DatabaseConnection.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("MovieId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -48,8 +47,6 @@ namespace DatabaseConnection.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("MovieId");
 
                     b.ToTable("Customers");
                 });
@@ -88,6 +85,9 @@ namespace DatabaseConnection.Migrations
                     b.Property<int?>("MovieId")
                         .HasColumnType("int");
 
+                    b.Property<string>("imageURL")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
@@ -95,15 +95,6 @@ namespace DatabaseConnection.Migrations
                     b.HasIndex("MovieId");
 
                     b.ToTable("Sales");
-                });
-
-            modelBuilder.Entity("DatabaseConnection.Customer", b =>
-                {
-                    b.HasOne("DatabaseConnection.Movie", "Movie")
-                        .WithMany()
-                        .HasForeignKey("MovieId");
-
-                    b.Navigation("Movie");
                 });
 
             modelBuilder.Entity("DatabaseConnection.Rental", b =>

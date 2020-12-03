@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace DatabaseConnection
@@ -26,6 +27,7 @@ namespace DatabaseConnection
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+           
         }
     }
 }

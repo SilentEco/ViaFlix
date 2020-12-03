@@ -33,22 +33,30 @@ namespace Store
             {
                 using (SqlConnection sqlCon = new SqlConnection(connectioString))
                 {
-                    sqlCon.Open();
-                    SqlCommand sqlCmd = new SqlCommand("AddUser", sqlCon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue(@"Name", NameSignUP.Text);
-                    sqlCmd.Parameters.AddWithValue(@"Username", UserNameSignUP.Text);
-                    sqlCmd.Parameters.AddWithValue(@"Password", PasswordSignUP.Password);
-                    sqlCmd.Parameters.AddWithValue(@"Phonenumber", PhonenumberSignup.Text);
-                    sqlCmd.Parameters.AddWithValue(@"Email", EmailSignup.Text);
-                    sqlCmd.Parameters.AddWithValue(@"Adress", AdressSignnup.Text);
-                    sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Registration complete");
-                    var LoginWindow = new LoginWindow();
-                    LoginWindow.Show();
-                    this.Close();
-                    
-                    Clear();
+                    try
+                    {
+                        sqlCon.Open();
+                        SqlCommand sqlCmd = new SqlCommand("AddUser", sqlCon);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue(@"Name", NameSignUP.Text);
+                        sqlCmd.Parameters.AddWithValue(@"Username", UserNameSignUP.Text);
+                        sqlCmd.Parameters.AddWithValue(@"Password", PasswordSignUP.Password);
+                        sqlCmd.Parameters.AddWithValue(@"Phonenumber", PhonenumberSignup.Text);
+                        sqlCmd.Parameters.AddWithValue(@"Email", EmailSignup.Text);
+                        sqlCmd.Parameters.AddWithValue(@"Adress", AdressSignnup.Text);
+
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Registration complete");
+                        var LoginWindow = new LoginWindow();
+                        LoginWindow.Show();
+                        this.Close();
+
+                        Clear();
+                    }
+                    catch(Microsoft.Data.SqlClient.SqlException)
+                    {
+                        MessageBox.Show("Your are only allowed 10 numbers in your phonenumber", "Error");
+                    }
                 }
             }
             void Clear()

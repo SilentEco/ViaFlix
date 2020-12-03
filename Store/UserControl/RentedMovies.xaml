@@ -52,7 +52,7 @@
             </Grid>
 
             <Grid Grid.Row="1">
-
+                <TextBox VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="80" Width="150" Name="TestBox" Foreground="White" Text="" FontSize="20"/>
             </Grid>
         </Grid>
         <Grid.Background>
