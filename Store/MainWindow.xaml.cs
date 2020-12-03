@@ -58,6 +58,7 @@ namespace Store
         }
         public void HigestRated()
         {
+            // Vilken ordning ska genres visas
             string[] genre_order = new string[] {
                                                 "Adventure",
                                                 "Comedy",
@@ -74,7 +75,12 @@ namespace Store
                                                 "Thriller",
                                                 "War",
                                                 "Mystery"};
+
+            // Hämta genres ur genrelistan
             List<Genre> genres = API.GetGenres();
+
+            //      Rad           Antalet Genres
+            //       v         v                 v
             for (int y = 0; y < genre_order.Length; y++)
             {
                 Genre genre = genres.FirstOrDefault(g => g.Name == genre_order[y]);
