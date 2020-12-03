@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UserInfo\" />
     <Folder Include="SeedData\" />
   </ItemGroup>
 

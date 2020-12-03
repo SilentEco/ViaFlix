@@ -58,7 +58,22 @@ namespace Store
         }
         public void HigestRated()
         {
-            string[] genre_order = new string[] { "Action", "Romance", "Drama" };
+            string[] genre_order = new string[] {
+                                                "Adventure",
+                                                "Comedy",
+                                                "Action",
+                                                "Family",
+                                                "Comedy",
+                                                "Romance",
+                                                "Drama",
+                                                "Crime",
+                                                "History",
+                                                "Sci-Fi",
+                                                "Biography",
+                                                "Horror",
+                                                "Thriller",
+                                                "War",
+                                                "Mystery"};
             List<Genre> genres = API.GetGenres();
             for (int y = 0; y < genre_order.Length; y++)
             {
@@ -67,7 +82,7 @@ namespace Store
 
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
-                    int i = y * MovieGrid.ColumnDefinitions.Count + x;
+                   int i = y * MovieGrid.ColumnDefinitions.Count + x;
                     if (i < movies_by_genre.Count)
                     {
                         var movie = movies_by_genre[i];

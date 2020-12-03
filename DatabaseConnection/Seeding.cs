@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace DatabaseConnection
 {
@@ -37,7 +38,11 @@ namespace DatabaseConnection
                     foreach (var g in genre_split)
                     {
                         Genre genre_rec = new Genre() { Name=g };
-                        genres.Add(genre_rec);
+
+                        // Hämta endast genres som inte nämst tidigare
+                        var unique_genres = genres.Distinct().ToList();
+
+                        unique_genres.Add(genre_rec);
                         movie_genres.Add(genre_rec);
                     }
 

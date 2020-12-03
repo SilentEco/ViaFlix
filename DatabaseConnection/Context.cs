@@ -13,7 +13,7 @@ namespace DatabaseConnection
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                //.LogTo(s => System.Diagnostics.Debug.WriteLine(s))
+                .LogTo(s => System.Diagnostics.Debug.WriteLine(s))
                 .UseLazyLoadingProxies()
                 .UseSqlServer(
                 @"server=.\SQLExpress;" +
