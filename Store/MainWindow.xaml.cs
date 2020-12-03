@@ -62,15 +62,15 @@ namespace Store
             List<Genre> genres = API.GetGenres();
             for (int y = 0; y < genre_order.Length; y++)
             {
-                Genre genre = genres.FirstOrDefault(g => g.Genres == genre_order[y]);
+                Genre genre = genres.FirstOrDefault(g => g.Name == genre_order[y]);
                 List<Movie> movies_by_genre = genre.Movies;
 
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
                     int i = y * MovieGrid.ColumnDefinitions.Count + x;
-                    if (i < State.Movies.Count)
+                    if (i < movies_by_genre.Count)
                     {
-                        var movie = State.Movies[i];
+                        var movie = movies_by_genre[i];
 
                         var image = new Image() { };
                         image.Cursor = Cursors.Hand;

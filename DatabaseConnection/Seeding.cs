@@ -36,7 +36,7 @@ namespace DatabaseConnection
                     var movie_genres = new List<Genre>();
                     foreach (var g in genre_split)
                     {
-                        Genre genre_rec = new Genre() { Genres=g };
+                        Genre genre_rec = new Genre() { Name=g };
                         genres.Add(genre_rec);
                         movie_genres.Add(genre_rec);
                     }

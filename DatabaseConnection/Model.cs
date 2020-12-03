@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DatabaseConnection;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace DatabaseConnection
 {
@@ -20,14 +21,15 @@ namespace DatabaseConnection
         public int Id { get; set; }
         public string Title { get; set; }
         public string ImageURL { get; set; }
-        public virtual Genre Genre { get; set; }
         public virtual List<Genre> Genres { get; set; }
         public virtual List<Rental> Sales { get; set; }
     }
+
+    [Index(nameof(Name), IsUnique = true)]
     public class Genre
     {
         public int Id { get; set; }
-        public string Genres { get; set; }
+        public string Name { get; set; }
         public virtual List<Movie> Movies { get; set; }
     }
     public class Rental
