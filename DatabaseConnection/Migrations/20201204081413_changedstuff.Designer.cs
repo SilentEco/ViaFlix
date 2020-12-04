@@ -4,14 +4,16 @@ using DatabaseConnection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20201204081413_changedstuff")]
+    partial class changedstuff
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,17 +91,17 @@ namespace DatabaseConnection.Migrations
 
                     b.HasIndex("MovieId");
 
-                    b.ToTable("Rentals");
+                    b.ToTable("Sales");
                 });
 
             modelBuilder.Entity("DatabaseConnection.Rental", b =>
                 {
                     b.HasOne("DatabaseConnection.Customer", "Customer")
-                        .WithMany("Rentals")
+                        .WithMany("Sales")
                         .HasForeignKey("CustomerId");
 
                     b.HasOne("DatabaseConnection.Movie", "Movie")
-                        .WithMany("Rentals")
+                        .WithMany("Sales")
                         .HasForeignKey("MovieId");
 
                     b.Navigation("Customer");
@@ -109,12 +111,12 @@ namespace DatabaseConnection.Migrations
 
             modelBuilder.Entity("DatabaseConnection.Customer", b =>
                 {
-                    b.Navigation("Rentals");
+                    b.Navigation("Sales");
                 });
 
             modelBuilder.Entity("DatabaseConnection.Movie", b =>
                 {
-                    b.Navigation("Rentals");
+                    b.Navigation("Sales");
                 });
 #pragma warning restore 612, 618
         }

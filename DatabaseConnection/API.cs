@@ -9,7 +9,7 @@ namespace DatabaseConnection
     public class API
     {
         static Context ctx;
-            static API()
+        static API()
         {
             ctx = new Context();
         }
@@ -20,16 +20,17 @@ namespace DatabaseConnection
         }
         public static Customer GetCustomerByUsername(string Username)
         {
-            
             return ctx.Customers.FirstOrDefault(c => c.Username == Username);
         }
 
         public static Customer GetCustomerByPassword(string password)
         {
-            
-            return ctx.Customers.FirstOrDefault(c => c.Password== password);
-
+            return ctx.Customers.FirstOrDefault(c => c.Password == password);
         }
+
+       
+
+        
         public static bool RegisterSale(Customer customer, Movie movie)
         {
             try
@@ -42,7 +43,7 @@ namespace DatabaseConnection
                 ctx.Add(new Rental() { Date = DateTime.Now, Customer = customer, Movie = movie });
                 return ctx.SaveChanges() == 1;
             }
-            catch(DbUpdateException e)
+            catch (DbUpdateException e)
             {
                 System.Diagnostics.Debug.WriteLine(e.Message);
                 System.Diagnostics.Debug.WriteLine(e.InnerException.Message);

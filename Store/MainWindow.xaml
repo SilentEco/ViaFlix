@@ -34,7 +34,7 @@
                         <Button x:Name="RentedMoviebtn" VerticalAlignment="Bottom" Background="#FF560027" Content="RENTED MOVIES" FontSize="12" Margin="0,0,0,35" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" FontFamily="Arial" BorderBrush="{x:Null}" Click="RentedMoviebtn_Click" />
                         <Button x:Name="HomeButton" Content="Home" Foreground="White" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" VerticalAlignment="Top" Background="#FF560027" BorderBrush="{x:Null}" Width="150" Height="27" FontSize="12" FontFamily="Arial" Click="HomeButton_Click" />
                         <MyMenu:Dropdown2 Margin="0,28,0,181" x:Name="Dropdown2"/>
-                        
+
                     </Grid>
 
                     <Rectangle Grid.Row="0">
@@ -69,9 +69,9 @@
                             <Label Content="Higest Rated" Background="#FFE2E2E2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
                             <ScrollViewer  BorderBrush="Black" BorderThickness="30" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2"  VerticalScrollBarVisibility="Disabled" Margin="0,0,16,0">
-                                <Grid Width="2000" Name="MovieGrid" ShowGridLines="False">
+                                <Grid  Width="2000" Name="MovieGrid" ShowGridLines="False">
 
-                                    <Grid.Background>
+                                    <Grid.Background >
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                             <GradientStop Color="Black" Offset="0.091"/>
                                             <GradientStop Color="#FF5B0606" Offset="0.922"/>
@@ -329,12 +329,12 @@
                     </Grid>
                 </Border>
             </ScrollViewer>
-            
+
             <Grid Grid.Column="1" >
                 <MyMenu:ActionPage Visibility="Hidden" x:Name="ActionPageTest"/>
                 <MyMenu:RentedMovies x:Name="Rentedmovies" Visibility="Hidden"/>
             </Grid>
-            
+
         </Grid>
     </StackPanel>
 

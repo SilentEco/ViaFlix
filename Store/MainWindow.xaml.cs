@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DatabaseConnection;
 using MahApps.Metro.Controls;
+using Store.UserControl;
 
 namespace Store
 {
@@ -36,14 +37,15 @@ namespace Store
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var x = Grid.GetColumn(sender as UIElement);
-            var y = Grid.GetRow(sender as UIElement);
 
-            int i = y * MovieGrid.ColumnDefinitions.Count + x;
-            State.Pick = State.Movies[i];
+            int i =  MovieGrid.ColumnDefinitions.Count + x;
+            State.Pick = State.Movies[i]; 
 
-            if (API.RegisterSale(State.User, State.Pick)) { 
-                MessageBox.Show("All is well and you can download your movie now.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (API.RegisterSale(State.User, State.Pick)) 
+            { 
+                MessageBox.Show($"You Picked the movie {State.Pick.Title}.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+
             else
                 MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
@@ -110,6 +112,7 @@ namespace Store
                 Rentedmovies.Visibility = Visibility.Visible;
             else
                 Rentedmovies.Visibility = Visibility.Hidden;
+            
         }
     }
 }
