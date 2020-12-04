@@ -19,9 +19,8 @@ namespace DatabaseConnection
                 ctx.RemoveRange(ctx.Genres);
 
 
-
+                List<Genre> unique_genres = new List<Genre>();
                 var movies = new List<Movie>();
-                var genres = new List<Genre>();
                 var lines = File.ReadAllLines(@"..\..\..\SeedData\MovieGenre.csv");
                 for (int i = 1; i < 200; i++)
                 {
@@ -37,12 +36,13 @@ namespace DatabaseConnection
                     var movie_genres = new List<Genre>();
                     foreach (var g in genre_split)
                     {
-                        Genre genre_rec = new Genre() { Name=g };
+                        Genre genre_rec = unique_genres.FirstOrDefault(genre => genre.Name == g);
+                        if (genre_rec == null)
+                        {
+                            genre_rec = new Genre() { Name = g };
+                            unique_genres.Add(genre_rec);
+                        }
 
-                        // Hämta endast genres som inte nämst tidigare
-                        var unique_genres = genres.Distinct().ToList();
-
-                        unique_genres.Add(genre_rec);
                         movie_genres.Add(genre_rec);
                     }
 
@@ -53,7 +53,7 @@ namespace DatabaseConnection
                     movies.Add(new Movie { Title = cells[2], ImageURL = url, Genres = movie_genres });
                 }
                 ctx.AddRange(movies);
-                ctx.AddRange(genres);
+                ctx.AddRange(unique_genres);
 
                 ctx.SaveChanges();
 

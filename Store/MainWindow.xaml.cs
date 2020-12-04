@@ -80,15 +80,17 @@ namespace Store
             List<Genre> genres = API.GetGenres();
 
             //      Rad           Antalet Genres
-            //       v         v                 v
+            //       v          v                v
             for (int y = 0; y < genre_order.Length; y++)
             {
                 Genre genre = genres.FirstOrDefault(g => g.Name == genre_order[y]);
+
+
                 List<Movie> movies_by_genre = genre.Movies;
 
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
-                   int i = y * MovieGrid.ColumnDefinitions.Count + x;
+                   int i = x;
                     if (i < movies_by_genre.Count)
                     {
                         var movie = movies_by_genre[i];
