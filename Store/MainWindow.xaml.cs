@@ -34,6 +34,7 @@ namespace Store
           
         }
 
+
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var x = Grid.GetColumn(sender as UIElement);
@@ -54,17 +55,44 @@ namespace Store
         {
             Namelbl.Content = $"Logged in as  \n{State.User.Username}";
         }
-
         public void HigestRated()
         {
-            State.Movies = API.GetMovieSlice(0, 30);
-            
+            // Vilken ordning ska genres visas
+            string[] genre_order = new string[] {
+                                                "Adventure",
+                                                "Comedy",
+                                                "Action",
+                                                "Family",
+                                                "Comedy",
+                                                "Romance",
+                                                "Drama",
+                                                "Crime",
+                                                "History",
+                                                "Sci-Fi",
+                                                "Biography",
+                                                "Horror",
+                                                "Thriller",
+                                                "War",
+                                                "Mystery"};
+
+            // Hämta genres ur genrelistan
+            List<Genre> genres = API.GetGenres();
+
+            //      Rad           Antalet Genres
+            //       v          v                v
+            for (int y = 0; y < genre_order.Length; y++)
+            {
+                Genre genre = genres.FirstOrDefault(g => g.Name == genre_order[y]);
+
+
+                List<Movie> movies_by_genre = genre.Movies;
+
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
-                    int i = MovieGrid.ColumnDefinitions.Count + x;
-                    if (i < State.Movies.Count)
+                   int i = x;
+                    if (i < movies_by_genre.Count)
                     {
-                        var movie = State.Movies[i];
+                        var movie = movies_by_genre[i];
 
                         var image = new Image() { };
                         image.Cursor = Cursors.Hand;

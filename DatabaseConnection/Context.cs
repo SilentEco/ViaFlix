@@ -8,12 +8,13 @@ namespace DatabaseConnection
     {
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Movie> Movies { get; set; }
-        public DbSet<Rental> Rentals { get; set; }
+        public DbSet<Rental> Sales { get; set; }
+        public DbSet<Genre> Genres { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                //.LogTo(s => System.Diagnostics.Debug.WriteLine(s))
+                .LogTo(s => System.Diagnostics.Debug.WriteLine(s))
                 .UseLazyLoadingProxies()
                 .UseSqlServer(
                 @"server=.\SQLExpress;" +

@@ -29,6 +29,17 @@ namespace Store
                 State.User = API.GetCustomerByUsername(NameField.Text.Trim());
                 State.Password = API.GetCustomerByPassword(PasswordField.Password.Trim());
 
+
+           // int getmatchid = State.User.Id.CompareTo(State.Password.Id);
+           //
+           // bool ismatch = false;
+           //
+           // if(getuserid == getpasswordid)
+           // {
+           //     ismatch = true;
+           // }
+
+
             if (State.User != null && State.Password != null)
             {
                 var next_window = new MainWindow();
