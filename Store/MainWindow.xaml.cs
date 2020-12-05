@@ -37,7 +37,7 @@ namespace Store
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            var x = Grid.GetColumn(sender as UIElement);
+            var x = Grid.GetRow(sender as UIElement);
 
             int i = MovieGrid.ColumnDefinitions.Count + x;
             State.Pick = State.Movies[i];
@@ -92,30 +92,31 @@ namespace Store
 
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
-                   int i = x;
+                    int i = x;
                     if (i < movies_by_genre.Count)
                     {
                         var movie = movies_by_genre[i];
 
-                    var image = new Image() { };
-                    image.Cursor = Cursors.Hand;
-                    image.MouseUp += Image_MouseUp;
-                    image.HorizontalAlignment = HorizontalAlignment.Center;
-                    image.VerticalAlignment = VerticalAlignment.Center;
-                    image.Source = new BitmapImage(new Uri(movie.ImageURL));
-                    image.Height = 80;
-                    image.Width = 120;
+                        var image = new Image() { };
+                        image.Cursor = Cursors.Hand;
+                        image.MouseUp += Image_MouseUp;
+                        image.HorizontalAlignment = HorizontalAlignment.Center;
+                        image.VerticalAlignment = VerticalAlignment.Center;
+                        image.Source = new BitmapImage(new Uri(movie.ImageURL));
+                        image.Height = 80;
+                        image.Width = 120;
 
-                    image.Margin = new Thickness(2, 2, 2, 2);
+                        image.Margin = new Thickness(2, 2, 2, 2);
 
-                    MovieGrid.Children.Add(image);
+                        MovieGrid.Children.Add(image);
 
 
-                    Grid.SetColumn(image, x);
+                        Grid.SetColumn(image, x);
 
+                    }
                 }
-            }
 
+            }
         }
 
 
