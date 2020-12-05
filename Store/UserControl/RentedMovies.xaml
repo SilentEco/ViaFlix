@@ -6,39 +6,42 @@
              xmlns:local="clr-namespace:Store.UserControl"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="RentedMovie" ShowGridLines="True">
+    <Grid x:Name="RentedMovie" ShowGridLines="False">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="130"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <ScrollViewer Grid.Column="0" FlowDirection="RightToLeft" Background="#FFE2E2E2">
+        
+        <ScrollViewer Grid.Column="0" FlowDirection="RightToLeft" Background="#FFE2E2E2" VerticalScrollBarVisibility="Hidden">
+            <Border  BorderBrush="White" BorderThickness="1,0,0,0">
+                <Grid Name="RentedMovieGrid" ShowGridLines="False" Height="1000">
+                    <Grid.Background >
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF5B0606" Offset="0.3"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Name="TestLabel"/>
+                </Grid>
+            </Border>
             
-            <Grid Name="RentedMovieGrid" ShowGridLines="False" Height="1000">
-                <Grid.Background >
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black"/>
-                        <GradientStop Color="#FF5B0606" Offset="0.3"/>
-                    </LinearGradientBrush>
-                </Grid.Background>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="100"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Name="TestLabel"/>
-            </Grid>
         </ScrollViewer>
 
         <Grid Grid.Column="1" ShowGridLines="False">
@@ -48,7 +51,10 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" >
-                <TextBox  Foreground='White' Text="" IsReadOnly="True" FontSize="25" Name="RentBox" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Viewbox>
+                    <TextBox  Foreground='White' Text="" IsReadOnly="True" FontSize="25" Name="RentBox" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                </Viewbox>
+               
             </Grid>
 
             <Grid Grid.Row="1">

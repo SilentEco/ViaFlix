@@ -28,7 +28,6 @@ namespace Store
         {
             InitializeComponent();
             Dropdown2.InitializeActionMenues(ActionPageTest);
-
             Namelabel();
             HigestRated();
 

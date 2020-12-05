@@ -18,10 +18,12 @@ namespace DatabaseConnection
         {
             return ctx.Genres.ToList();
         }
+
         public static List<Movie> GetMovieSlice(int a, int b)
         {
             return ctx.Movies.OrderBy(m => m.Title).Skip(a).Take(b).ToList();
         }
+
         public static Customer GetCustomerByUsername(string Username)
         {
             return ctx.Customers.FirstOrDefault(c => c.Username == Username);
@@ -32,9 +34,6 @@ namespace DatabaseConnection
             return ctx.Customers.FirstOrDefault(c => c.Password == password);
         }
 
-       
-
-        
         public static bool RegisterSale(Customer customer, Movie movie)
         {
             try
