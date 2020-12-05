@@ -24,8 +24,12 @@ namespace Store.UserControl
             InitializeComponent();
             MoviesRented();
             RentedMovieText();
-
+            RefreshRented = this;
         }
+
+        public static RentedMovies RefreshRented { get; private set; }
+        
+
 
         public void MoviesRented()
         {
@@ -56,6 +60,7 @@ namespace Store.UserControl
 
                     RentedMovieGrid.Children.Add(image);
                     Grid.SetRow(image, y);
+
 
                 }
               

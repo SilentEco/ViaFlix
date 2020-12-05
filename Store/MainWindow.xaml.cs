@@ -25,29 +25,31 @@ namespace Store
     public partial class MainWindow : Window
     {
         public MainWindow()
-        { 
+        {
             InitializeComponent();
             Dropdown2.InitializeActionMenues(ActionPageTest);
 
             LoggedinLbl();
             HigestRated();
-          
+
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var x = Grid.GetColumn(sender as UIElement);
 
-            int i =  MovieGrid.ColumnDefinitions.Count + x;
-            State.Pick = State.Movies[i]; 
+            int i = MovieGrid.ColumnDefinitions.Count + x;
+            State.Pick = State.Movies[i];
 
-            if (API.RegisterSale(State.User, State.Pick)) 
-            { 
+            if (API.RegisterSale(State.User, State.Pick))
+            {
                 MessageBox.Show($"You Picked the movie {State.Pick.Title}.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
             else
                 MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+
+            RentedMovies.RefreshRented.MoviesRented();
         }
 
         public void LoggedinLbl()
@@ -58,36 +60,36 @@ namespace Store
         public void HigestRated()
         {
             State.Movies = API.GetMovieSlice(0, 30);
-            
-                for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
+
+            for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
+            {
+                int i = MovieGrid.ColumnDefinitions.Count + x;
+                if (i < State.Movies.Count)
                 {
-                    int i = MovieGrid.ColumnDefinitions.Count + x;
-                    if (i < State.Movies.Count)
-                    {
-                        var movie = State.Movies[i];
+                    var movie = State.Movies[i];
 
-                        var image = new Image() { };
-                        image.Cursor = Cursors.Hand;
-                        image.MouseUp += Image_MouseUp;
-                        image.HorizontalAlignment = HorizontalAlignment.Center;
-                        image.VerticalAlignment = VerticalAlignment.Center;
-                        image.Source = new BitmapImage(new Uri(movie.ImageURL));
-                        image.Height = 80;
-                        image.Width = 120;
+                    var image = new Image() { };
+                    image.Cursor = Cursors.Hand;
+                    image.MouseUp += Image_MouseUp;
+                    image.HorizontalAlignment = HorizontalAlignment.Center;
+                    image.VerticalAlignment = VerticalAlignment.Center;
+                    image.Source = new BitmapImage(new Uri(movie.ImageURL));
+                    image.Height = 80;
+                    image.Width = 120;
 
-                        image.Margin = new Thickness(2, 2, 2, 2);
+                    image.Margin = new Thickness(2, 2, 2, 2);
 
-                        MovieGrid.Children.Add(image);
+                    MovieGrid.Children.Add(image);
 
-                       
-                        Grid.SetColumn(image, x);
 
-                    }
+                    Grid.SetColumn(image, x);
+
                 }
-            
+            }
+
         }
-       
-  
+
+
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             if (Rentedmovies.Visibility == Visibility.Visible)
@@ -108,11 +110,13 @@ namespace Store
 
         private void RentedMoviebtn_Click(object sender, RoutedEventArgs e)
         {
+
             if (Rentedmovies.Visibility == Visibility.Hidden)
+
                 Rentedmovies.Visibility = Visibility.Visible;
             else
                 Rentedmovies.Visibility = Visibility.Hidden;
-            
+
         }
     }
 }
