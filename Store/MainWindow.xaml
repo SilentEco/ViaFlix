@@ -30,9 +30,9 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="1">
-                        <Button x:Name="LogoutButton" VerticalAlignment="Bottom" Background="#FF560027" Foreground="White" Content="Logout" FontSize="12"  Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="{x:Null}" FontFamily="Arial" Click="LogoutButton_Click"/>
-                        <Button x:Name="RentedMoviebtn" VerticalAlignment="Bottom" Background="#FF560027" Content="RENTED MOVIES" FontSize="12" Margin="0,0,0,35" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" FontFamily="Arial" BorderBrush="{x:Null}" Click="RentedMoviebtn_Click" />
-                        <Button x:Name="HomeButton" Content="Home" Foreground="White" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" VerticalAlignment="Top" Background="#FF560027" BorderBrush="{x:Null}" Width="150" Height="27" FontSize="12" FontFamily="Arial" Click="HomeButton_Click" />
+                        <Button x:Name="LogoutButton" Background="#FF560027" Foreground="White" Content="Logout" FontSize="12"  Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" BorderBrush="{x:Null}" FontFamily="Segoe UI Semibold" Click="LogoutButton_Click" Height="32" VerticalAlignment="Bottom"/>
+                        <Button x:Name="RentedMoviebtn" VerticalAlignment="Bottom" Background="#FF560027" Content="Rented Movies" FontSize="12" Margin="0,0,0,35" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" FontFamily="Segoe UI Semibold" BorderBrush="{x:Null}" Click="RentedMoviebtn_Click" />
+                        <Button x:Name="HomeButton" Content="Home" Foreground="White" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10" VerticalAlignment="Top" Background="#FF560027" BorderBrush="{x:Null}" Width="150" Height="27" FontSize="12" FontFamily="Segoe UI Semibold" Click="HomeButton_Click" />
                         <MyMenu:Dropdown2 Margin="0,28,0,181" x:Name="Dropdown2"/>
 
                     </Grid>
@@ -46,7 +46,8 @@
                         </Rectangle.Fill>
                     </Rectangle>
 
-                    <Label Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Name="Namelbl" Foreground="#DDFFFFFF" />
+                    <Label Grid.Row="0" VerticalAlignment="Center" Content="" HorizontalAlignment="Center" Name="UpperNamelbl" Foreground="#DDFFFFFF" Margin="0,0,0,35" />
+                    <Label Grid.Row="0" VerticalAlignment="Center" Content="" HorizontalAlignment="Center" Name="LowerNamelbl" Foreground="#DDFFFFFF" Margin="0,0,0,0" />
 
                 </Grid>
             </Grid>
