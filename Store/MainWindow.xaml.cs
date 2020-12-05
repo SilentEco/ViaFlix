@@ -29,7 +29,7 @@ namespace Store
             InitializeComponent();
             Dropdown2.InitializeActionMenues(ActionPageTest);
 
-            LoggedinLbl();
+            Namelabel();
             HigestRated();
 
         }
@@ -52,9 +52,10 @@ namespace Store
             RentedMovies.RefreshRented.MoviesRented();
         }
 
-        public void LoggedinLbl()
+        public void Namelabel()
         {
-            Namelbl.Content = $"Logged in as  \n{State.User.Username}";
+            UpperNamelbl.Content = "Hello and welcome";
+            LowerNamelbl.Content = $"{State.User.Name}";
         }
 
         public void HigestRated()
