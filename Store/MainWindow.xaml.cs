@@ -29,8 +29,8 @@ namespace Store
             InitializeComponent();
             Dropdown2.InitializeActionMenues(ActionPageTest);
             Namelabel();
-            HigestRated();
-
+            ActionGrid();
+            ComedyGrid();
         }
 
 
@@ -38,7 +38,7 @@ namespace Store
         {
             var x = Grid.GetColumn(sender as UIElement);
 
-            int i = MovieGrid.ColumnDefinitions.Count + x;
+            int i = Action.ColumnDefinitions.Count + x;
             State.Pick = State.Movies[i];
 
             if (API.RegisterSale(State.User, State.Pick))
@@ -57,7 +57,7 @@ namespace Store
             UpperNamelbl.Content = "Hello and welcome";
             LowerNamelbl.Content = $"{State.User.Name}";
         }
-        public void HigestRated()
+        public void ActionGrid()
         {
             // Vilken ordning ska genres visas
             string[] genre_order = new string[] {
@@ -89,7 +89,7 @@ namespace Store
 
                 List<Movie> movies_by_genre = genre.Movies;
 
-                for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
+                for (int x = 0; x < Action.ColumnDefinitions.Count; x++)
                 {
                     int i = x;
                     if (i < movies_by_genre.Count)
@@ -107,7 +107,7 @@ namespace Store
 
                         image.Margin = new Thickness(2, 2, 2, 2);
 
-                        MovieGrid.Children.Add(image);
+                        Action.Children.Add(image);
 
 
                         Grid.SetColumn(image, x);
@@ -116,6 +116,38 @@ namespace Store
                 }
 
             }
+        }
+
+        public void ComedyGrid()
+        {
+            State.Movies = API.GetMovieSlice(0, 30);
+
+            for (int x = 0; x < Comedy.ColumnDefinitions.Count; x++)
+            {
+                int i = Comedy.ColumnDefinitions.Count + x;
+                if (i < State.Movies.Count)
+                {
+                    var movie = State.Movies[i];
+
+                    var image = new Image() { };
+                    image.Cursor = Cursors.Hand;
+                    image.MouseUp += Image_MouseUp;
+                    image.HorizontalAlignment = HorizontalAlignment.Center;
+                    image.VerticalAlignment = VerticalAlignment.Center;
+                    image.Source = new BitmapImage(new Uri(movie.ImageURL));
+                    image.Height = 80;
+                    image.Width = 120;
+
+                    image.Margin = new Thickness(2, 2, 2, 2);
+
+                    Comedy.Children.Add(image);
+
+
+                    Grid.SetColumn(image, x);
+
+                }
+            }
+
         }
 
 

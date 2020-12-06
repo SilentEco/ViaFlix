@@ -65,52 +65,10 @@
                             <RowDefinition Height="130" />
                         </Grid.RowDefinitions>
 
-                        <Grid Grid.Row="0" Background="Red" HorizontalAlignment="Left">
-
-                            <Label Content="Higest Rated" Background="#FFE2E2E2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
-
-                            <ScrollViewer  BorderBrush="Black" BorderThickness="30" Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2"  VerticalScrollBarVisibility="Disabled" Margin="0,0,16,0">
-                                <Grid  Width="2000" Name="MovieGrid" ShowGridLines="False">
-
-                                    <Grid.Background >
-                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                            <GradientStop Color="Black" Offset="0.091"/>
-                                            <GradientStop Color="#FF5B0606" Offset="0.922"/>
-                                        </LinearGradientBrush>
-                                    </Grid.Background>
+                       
 
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                        <ColumnDefinition Width="133.333333333"/>
-                                    </Grid.ColumnDefinitions>
-
-                                </Grid>
-                            </ScrollViewer>
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="30"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-
-                        </Grid>
-
-
-                        <Grid Grid.Row="1" Background="White">
+                        <Grid Grid.Row="0" Background="White">
                             <Label Content="Action" Background="#FFE2E2E2" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0" />
                             <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled">
                                 <Border>
@@ -155,7 +113,7 @@
                         </Grid>
 
 
-                        <Grid Grid.Row="2" Background="White">
+                        <Grid Grid.Row="1" Background="White">
                             <Label Content="Comedy" Background="#FFE2E2E2" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
                             <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled" >
@@ -198,7 +156,7 @@
 
                         </Grid>
 
-                        <Grid Grid.Row="3" Background="#FFE2E2E2">
+                        <Grid Grid.Row="2" Background="#FFE2E2E2">
                             <Label Content="Drama" Background="#FFE2E2E2" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
                             <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled" >
@@ -241,7 +199,7 @@
 
                         </Grid>
 
-                        <Grid Grid.Row="4" Background="#FFE2E2E2">
+                        <Grid Grid.Row="3" Background="#FFE2E2E2">
                             <Label Content="Sci-fi" Background="#FFE2E2E2" Foreground="Black" BorderBrush="Black" BorderThickness="0,2,0,2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
                             <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled" >
@@ -284,7 +242,7 @@
 
                         </Grid>
 
-                        <Grid Grid.Row="5" Background="#FFE2E2E2">
+                        <Grid Grid.Row="4" Background="#FFE2E2E2">
                             <Label Content="Romance" Background="#FFE2E2E2" BorderBrush="Black" BorderThickness="0,2,0,2" Foreground="Black"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,16,0"/>
 
                             <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" Background="#FFE2E2E2" VerticalScrollBarVisibility="Disabled">
