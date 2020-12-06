@@ -89,7 +89,7 @@ namespace Store
 
                 for (int x = 0; x < MovieGrid.ColumnDefinitions.Count; x++)
                 {
-                   int i = x;
+                    int i = x;
                     if (i < movies_by_genre.Count)
                     {
                         var movie = movies_by_genre[i];
@@ -107,14 +107,14 @@ namespace Store
 
                         MovieGrid.Children.Add(image);
 
-                       
+
                         Grid.SetColumn(image, x);
 
                     }
                 }
-            
+
+            }
         }
-       
   
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {

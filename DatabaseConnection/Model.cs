@@ -25,7 +25,7 @@ namespace DatabaseConnection
         public string Title { get; set; }
         public string ImageURL { get; set; }
         public virtual List<Genre> Genres { get; set; }
-        public virtual List<Rental> Sales { get; set; }
+        public virtual List<Rental> Rentals { get; set; }
     }
 
     [Index(nameof(Name), IsUnique = true)]
