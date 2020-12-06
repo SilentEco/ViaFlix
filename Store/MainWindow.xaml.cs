@@ -25,35 +25,37 @@ namespace Store
     public partial class MainWindow : Window
     {
         public MainWindow()
-        { 
+        {
             InitializeComponent();
             Dropdown2.InitializeActionMenues(ActionPageTest);
-
-            LoggedinLbl();
+            Namelabel();
             HigestRated();
-          
+
         }
 
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            var x = Grid.GetColumn(sender as UIElement);
+            var x = Grid.GetRow(sender as UIElement);
 
-            int i =  MovieGrid.ColumnDefinitions.Count + x;
-            State.Pick = State.Movies[i]; 
+            int i = MovieGrid.ColumnDefinitions.Count + x;
+            State.Pick = State.Movies[i];
 
-            if (API.RegisterSale(State.User, State.Pick)) 
-            { 
+            if (API.RegisterSale(State.User, State.Pick))
+            {
                 MessageBox.Show($"You Picked the movie {State.Pick.Title}.", "Sale Succeeded!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
             else
                 MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+
+            RentedMovies.RefreshRented.MoviesRented();
         }
 
-        public void LoggedinLbl()
+        public void Namelabel()
         {
-            Namelbl.Content = $"Logged in as  \n{State.User.Username}";
+            UpperNamelbl.Content = "Hello and welcome";
+            LowerNamelbl.Content = $"{State.User.Name}";
         }
         public void HigestRated()
         {
@@ -115,7 +117,8 @@ namespace Store
 
             }
         }
-  
+
+
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             if (Rentedmovies.Visibility == Visibility.Visible)
@@ -136,11 +139,13 @@ namespace Store
 
         private void RentedMoviebtn_Click(object sender, RoutedEventArgs e)
         {
+
             if (Rentedmovies.Visibility == Visibility.Hidden)
+
                 Rentedmovies.Visibility = Visibility.Visible;
             else
                 Rentedmovies.Visibility = Visibility.Hidden;
-            
+
         }
     }
 }

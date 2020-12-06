@@ -24,8 +24,12 @@ namespace Store.UserControl
             InitializeComponent();
             MoviesRented();
             RentedMovieText();
-
+            RefreshRented = this;
         }
+
+        public static RentedMovies RefreshRented { get; private set; }
+
+
 
         public void MoviesRented()
         {
@@ -44,7 +48,6 @@ namespace Store.UserControl
                 if (i < movies.Count)
                 {
                     var movie = movies[i];
-
                     var image = new Image() { };
 
                     image.HorizontalAlignment = HorizontalAlignment.Center;
@@ -56,19 +59,15 @@ namespace Store.UserControl
 
                     RentedMovieGrid.Children.Add(image);
                     Grid.SetRow(image, y);
-
                 }
-              
             }
-
-           
         }
 
 
 
         public void RentedMovieText()
         {
-            RentBox.Text = $"Hello {State.User.Name}, These are the movies you've picked ";
+            RentBox.Text = $"Hello {State.User.Name}, these are the movies you've picked ";
         }
     }
 }

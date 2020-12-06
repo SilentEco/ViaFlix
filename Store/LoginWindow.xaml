@@ -39,7 +39,7 @@
         </Rectangle>
 
         <Grid Width="200" Height="150" VerticalAlignment="Center">
-            <TextBlock FontFamily="Champagne &amp; Limousines" FontSize="12" Text="SIGN IN" 
+            <TextBlock FontFamily="Segoe UI Semibold" FontSize="12" Text="SIGN IN" 
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
 
             <StackPanel VerticalAlignment="Center" Margin="10">
@@ -58,11 +58,11 @@
 
         <Button VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
                 Margin="400,0,300,168" Height="20" Width="100" Content="LOGIN" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
-                Click="LogIn_Click" FontFamily="Arial" FontSize="10" Background='#560027' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal"
+                Click="LogIn_Click" FontFamily="Segoe UI Semibold" FontSize="10" Background='#560027' BorderBrush="Black" Foreground="#DDFFFFFF" FontWeight="Normal"
                 />
         <Button VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" 
                 Margin="300,0,400,168" Height="20" Width="100" Content="SIGN UP" Style="{StaticResource MaterialDesignRaisedDarkButton}"  materialDesign:ButtonAssist.CornerRadius="10"
-                Click="SignUp_Click" FontFamily="Arial" FontSize="10" Background='#560027' BorderBrush="White" Foreground="#DDFFFFFF" FontWeight="Normal"
+                Click="SignUp_Click" FontFamily="Segoe UI Semibold" FontSize="10" Background='#560027' BorderBrush="Black" Foreground="#DDFFFFFF" FontWeight="Normal"
                 />
     </Grid>
 
