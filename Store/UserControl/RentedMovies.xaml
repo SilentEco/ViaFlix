@@ -52,7 +52,7 @@
 
             <Grid Grid.Row="0" >
                 <Viewbox>
-                    <TextBox  Foreground='White' Text="" IsReadOnly="True" FontSize="25" Name="RentBox" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox  Foreground='White' Text="" IsReadOnly="True" FontSize="25" FontFamily="Goldman" Name="RentBox" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                 </Viewbox>
                
             </Grid>
