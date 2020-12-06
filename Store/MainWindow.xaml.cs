@@ -36,7 +36,7 @@ namespace Store
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            var x = Grid.GetRow(sender as UIElement);
+            var x = Grid.GetColumn(sender as UIElement);
 
             int i = MovieGrid.ColumnDefinitions.Count + x;
             State.Pick = State.Movies[i];
