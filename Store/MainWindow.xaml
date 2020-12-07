@@ -53,8 +53,8 @@
             </Grid>
 
             <ScrollViewer  Grid.Column="1" HorizontalScrollBarVisibility="Hidden" Background="#FFE2E2E2" VerticalScrollBarVisibility="Visible" HorizontalContentAlignment="Left" HorizontalAlignment="Right">
-                <Border BorderBrush="Black" BorderThickness="2" Height="782" >
-                    <Grid Width="700" Height="800" Background="Transparent"  HorizontalAlignment="Left" >
+                <Border BorderBrush="Black" BorderThickness="2" Height="672" >
+                    <Grid Width="700" Background="Transparent"  HorizontalAlignment="Center" Margin="0,0,0,-6" >
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="130" />
@@ -65,7 +65,7 @@
                             <RowDefinition Height="130" />
                         </Grid.RowDefinitions>
 
-                       
+
 
 
                         <Grid Grid.Row="0" Background="White">

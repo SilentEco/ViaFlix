@@ -31,6 +31,7 @@ namespace Store
             Namelabel();
             ActionGrid();
             ComedyGrid();
+            DramaGrid();
         }
 
 
@@ -141,6 +142,38 @@ namespace Store
                     image.Margin = new Thickness(2, 2, 2, 2);
 
                     Comedy.Children.Add(image);
+
+
+                    Grid.SetColumn(image, x);
+
+                }
+            }
+
+        }
+
+        public void DramaGrid()
+        {
+            State.Movies = API.GetMovieSlice(25, 45);
+
+            for (int x = 0; x < Drama.ColumnDefinitions.Count; x++)
+            {
+                int i = Drama.ColumnDefinitions.Count + x;
+                if (i < State.Movies.Count)
+                {
+                    var movie = State.Movies[i];
+
+                    var image = new Image() { };
+                    image.Cursor = Cursors.Hand;
+                    image.MouseUp += Image_MouseUp;
+                    image.HorizontalAlignment = HorizontalAlignment.Center;
+                    image.VerticalAlignment = VerticalAlignment.Center;
+                    image.Source = new BitmapImage(new Uri(movie.ImageURL));
+                    image.Height = 80;
+                    image.Width = 120;
+
+                    image.Margin = new Thickness(2, 2, 2, 2);
+
+                    Drama.Children.Add(image);
 
 
                     Grid.SetColumn(image, x);
