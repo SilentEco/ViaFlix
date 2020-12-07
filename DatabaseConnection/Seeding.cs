@@ -15,6 +15,7 @@ namespace DatabaseConnection
         {
             using (var ctx = new Context())
             {
+                // rensar datan i databasen, likt DropTable i SQL
                 ctx.RemoveRange(ctx.Rentals);
                 ctx.RemoveRange(ctx.Movies);
                 ctx.RemoveRange(ctx.Customers);
@@ -27,6 +28,7 @@ namespace DatabaseConnection
                 for (int i = 1; i < 200; i++)
                 {
                     // imdbId,Imdb Link,Title,IMDB Score,Genre,Poster
+                    //Den hackar upp varje cell och hämtar posters.
                     var cells = lines[i].Split(',');
                     var url = cells[5].Trim('"');
 
@@ -55,6 +57,7 @@ namespace DatabaseConnection
 
                     movies.Add(new Movie { Title = cells[2], ImageURL = url, Genres = movie_genres });
                 }
+                //Lgger till nya filmer och genres.
                 ctx.AddRange(movies);
                 ctx.AddRange(unique_genres);
 

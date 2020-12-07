@@ -7,7 +7,7 @@
 
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="684">
-    <Grid x:Name="ActionGrid">
+    <Grid Name="ActionGridMovie">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black"/>

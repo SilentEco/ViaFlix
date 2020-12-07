@@ -27,10 +27,11 @@ namespace Store.UserControl
             RefreshRented = this;
         }
 
+        // en contructor för RentedMovies så man kan "Refresha"
         public static RentedMovies RefreshRented { get; private set; }
 
 
-
+        // Lägger ut filmerna man har "Köpt"
         public void MoviesRented()
         {
 

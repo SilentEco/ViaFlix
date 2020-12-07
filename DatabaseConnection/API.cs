@@ -14,26 +14,32 @@ namespace DatabaseConnection
             ctx = new Context();
         }
 
+
+        //Kollar vilka genre som finns i filmlistan.
         public static List<Genre> GetGenres()
         {
             return ctx.Genres.ToList();
         }
 
+        //Delar upp och hämtar filmerna.
         public static List<Movie> GetMovieSlice(int a, int b)
         {
             return ctx.Movies.OrderBy(m => m.Title).Skip(a).Take(b).ToList();
         }
 
+        //Sätter användernamn 
         public static Customer GetCustomerByUsername(string Username)
         {
             return ctx.Customers.FirstOrDefault(c => c.Username == Username);
         }
 
+        //Sätter lösenord.
         public static Customer GetCustomerByPassword(string password)
         {
             return ctx.Customers.FirstOrDefault(c => c.Password == password);
         }
 
+        //Regristrerar ett "köp"
         public static bool RegisterSale(Customer customer, Movie movie)
         {
             try

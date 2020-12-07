@@ -25,6 +25,8 @@ namespace Store
             InitializeComponent();
         }
 
+        // Här gör man sitt konto
+        // den kollar så att ingen av fälten är tomma förutom Telefonnummer
         private void WindowSignUp_Click(object sender, RoutedEventArgs e)
         {
             if (UserNameSignUP.Text == "" || PasswordSignUP.Password == "" || NameSignUP.Text == "" || EmailSignup.Text == "" || AdressSignnup.Text == "")
@@ -35,6 +37,7 @@ namespace Store
                 {
                     try
                     {
+                        //En Stored Procedure som tar info vad man skriver i alla fields och kopplar de till databasen.
                         sqlCon.Open();
                         SqlCommand sqlCmd = new SqlCommand("AddUser", sqlCon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;
@@ -51,22 +54,19 @@ namespace Store
                         LoginWindow.Show();
                         this.Close();
 
-                        Clear();
+                        
                     }
+                    //satte phonenumber till 10 totala siffror om man skriver mer så crashar de egentiligen men satte en catch så tar skriver felmeddelandet.
                     catch(Microsoft.Data.SqlClient.SqlException)
                     {
                         MessageBox.Show("Your are only allowed 10 numbers in your phonenumber", "Error");
                     }
                 }
             }
-            void Clear()
-            {
-                UserNameSignUP.Text = PasswordSignUP.Password = "";
-            }
-            
 
         }
 
+        // en knapt som skickar tillbaka en till LoginWindow
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             var Back = new LoginWindow();

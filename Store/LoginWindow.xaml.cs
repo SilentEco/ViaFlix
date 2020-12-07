@@ -24,34 +24,28 @@ namespace Store
             InitializeComponent();
         }
 
+        // Här tar den Username och password och lägger in de till State.User och State.Password den får info från metoden GetCustomerBy, och sen kopplat till 
+        // WPF window med två Fields.
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
                 State.User = API.GetCustomerByUsername(NameField.Text.Trim());
                 State.Password = API.GetCustomerByPassword(PasswordField.Password.Trim());
 
-
-           // int getmatchid = State.User.Id.CompareTo(State.Password.Id);
-           //
-           // bool ismatch = false;
-           //
-           // if(getuserid == getpasswordid)
-           // {
-           //     ismatch = true;
-           // }
-
-
+            // Sålänge ingen av dom är null så kan man komma in
             if (State.User != null && State.Password != null)
             {
                 var next_window = new MainWindow();
                 next_window.Show();
                 this.Close();
             }
+
+            //Annars är de fel
             else
             {
                 MessageBox.Show("Wrong username or password", "Error");
             }
         }
-
+        //Är byter man window till Signup.
         private void SignUp_Click(object sender, RoutedEventArgs e)
         {
             var signUp = new SignUpWindow();

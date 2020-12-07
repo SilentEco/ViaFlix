@@ -8,6 +8,7 @@ namespace Store
 {
     class State
     {
+        //Gör så man kan kalla på tables
         public static Customer User { get; set; }
         public static Customer Password { get; set; }
         public static List<Movie> Movies { get; set; }

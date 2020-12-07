@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseConnection;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -22,6 +23,12 @@ namespace Store.UserControl
         {
             
             InitializeComponent();
+            
         }
+
+       
+
     }
+
+   
 }

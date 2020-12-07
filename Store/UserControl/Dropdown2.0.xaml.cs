@@ -25,13 +25,16 @@ namespace Store.UserControl
             InitializeComponent();
             customeDesign();
         }
-
+      
+        
+       
         public void InitializeActionMenues(ActionPage ActionGenre)
         {
             this.ActionGenre = ActionGenre;
             ActionGenre.Visibility = Visibility.Hidden;
         }
 
+// Gömmer och visar Genre panelen.
         private void customeDesign()
         {
             GenrePanel.Visibility = Visibility.Hidden;
@@ -43,7 +46,8 @@ namespace Store.UserControl
                 GenrePanel.Visibility = Visibility.Hidden;
 
         }
-
+        //-------------------------------------------------------------------------------
+        // Gömmer och visar Submeny panelerna från genre panelen
         private void showSubmenu(Panel SubMenu)
         {
             if (SubMenu.Visibility == Visibility.Hidden)
@@ -54,12 +58,15 @@ namespace Store.UserControl
             else
                 SubMenu.Visibility = Visibility.Hidden;
         }
-
+        //-------------------------------------------------------------------------------
+        //Knappen för Genre som ser till att den visar SubMeny
         private void GenreButton_Click(object sender, RoutedEventArgs e)
         {
             showSubmenu(GenrePanel);
         }
 
+
+        //Knapp så dem gömmer och visar ActionGenre User control.
         private void btnAction_Click(object sender, RoutedEventArgs e)
         {
             if(ActionGenre.Visibility == Visibility.Hidden)

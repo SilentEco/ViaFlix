@@ -32,9 +32,12 @@ namespace Store
             ActionGrid();
             ComedyGrid();
             DramaGrid();
+            SciFiGrid();
+            RomanceGrid();
+
         }
 
-
+        //Musclick så man kan välja film.
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var x = Grid.GetColumn(sender as UIElement);
@@ -58,6 +61,8 @@ namespace Store
             UpperNamelbl.Content = "Hello and welcome";
             LowerNamelbl.Content = $"{State.User.Name}";
         }
+
+        //Lägger ut filmer i samtliga grids.
         public void ActionGrid()
         {
             // Vilken ordning ska genres visas
@@ -180,9 +185,74 @@ namespace Store
 
                 }
             }
-
         }
 
+        public void SciFiGrid()
+        {
+            State.Movies = API.GetMovieSlice(45, 65);
+
+            for (int x = 0; x < Sci_fi.ColumnDefinitions.Count; x++)
+            {
+                int i = Sci_fi.ColumnDefinitions.Count + x;
+                if (i < State.Movies.Count)
+                {
+                    var movie = State.Movies[i];
+
+                    var image = new Image() { };
+                    image.Cursor = Cursors.Hand;
+                    image.MouseUp += Image_MouseUp;
+                    image.HorizontalAlignment = HorizontalAlignment.Center;
+                    image.VerticalAlignment = VerticalAlignment.Center;
+                    image.Source = new BitmapImage(new Uri(movie.ImageURL));
+                    image.Height = 80;
+                    image.Width = 120;
+
+                    image.Margin = new Thickness(2, 2, 2, 2);
+
+                    Sci_fi.Children.Add(image);
+
+
+                    Grid.SetColumn(image, x);
+
+                }
+            }
+        }
+
+        public void RomanceGrid()
+        {
+            State.Movies = API.GetMovieSlice(65, 85);
+
+            for (int x = 0; x < Romance.ColumnDefinitions.Count; x++)
+            {
+                int i = Romance.ColumnDefinitions.Count + x;
+                if (i < State.Movies.Count)
+                {
+                    var movie = State.Movies[i];
+
+                    var image = new Image() { };
+                    image.Cursor = Cursors.Hand;
+                    image.MouseUp += Image_MouseUp;
+                    image.HorizontalAlignment = HorizontalAlignment.Center;
+                    image.VerticalAlignment = VerticalAlignment.Center;
+                    image.Source = new BitmapImage(new Uri(movie.ImageURL));
+                    image.Height = 80;
+                    image.Width = 120;
+
+                    image.Margin = new Thickness(2, 2, 2, 2);
+
+                    Romance.Children.Add(image);
+
+
+                    Grid.SetColumn(image, x);
+
+                }
+            }
+        }
+
+
+        //-------------------------------------------------------------
+
+        //Knapp som gör så man kommer till "home screen"
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
@@ -193,6 +263,8 @@ namespace Store
                 ActionPageTest.Visibility = Visibility.Hidden;
         }
 
+        //Log out button säger sig självt
+
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("You've succesfully logged out", "Logged out");
@@ -201,6 +273,8 @@ namespace Store
             this.Close();
 
         }
+
+        // Knappt som lägger fram en Usercontrol med filmer man har "hyrt"
 
         private void RentedMoviebtn_Click(object sender, RoutedEventArgs e)
         {
