@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using DatabaseConnection;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,7 +20,7 @@ namespace Store
     /// </summary>
     public partial class SignUpWindow : Window
     {
-        string connectioString = @"Data Source = .\SQLEXPRESS; Initial Catalog = SaleDatabase; Trusted_Connection=True;";
+        
         public SignUpWindow()
         {
             InitializeComponent();
@@ -27,43 +28,33 @@ namespace Store
 
         // Här gör man sitt konto
         // den kollar så att ingen av fälten är tomma förutom Telefonnummer
-        private void WindowSignUp_Click(object sender, RoutedEventArgs e)
+        public void WindowSignUp_Click(object sender, RoutedEventArgs e)
         {
-            if (UserNameSignUP.Text == "" || PasswordSignUP.Password == "" || NameSignUP.Text == "" || EmailSignup.Text == "" || AdressSignnup.Text == "")
-                MessageBox.Show("Please fill the requiered forms");
-            else
+            using (var ctx = new Context())
             {
-                using (SqlConnection sqlCon = new SqlConnection(connectioString))
-                {
-                    try
-                    {
-                        //En Stored Procedure som tar info vad man skriver i alla fields och kopplar de till databasen.
-                        sqlCon.Open();
-                        SqlCommand sqlCmd = new SqlCommand("AddUser", sqlCon);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
-                        sqlCmd.Parameters.AddWithValue(@"Name", NameSignUP.Text);
-                        sqlCmd.Parameters.AddWithValue(@"Username", UserNameSignUP.Text);
-                        sqlCmd.Parameters.AddWithValue(@"Password", PasswordSignUP.Password);
-                        sqlCmd.Parameters.AddWithValue(@"Phonenumber", PhonenumberSignup.Text);
-                        sqlCmd.Parameters.AddWithValue(@"Email", EmailSignup.Text);
-                        sqlCmd.Parameters.AddWithValue(@"Adress", AdressSignnup.Text);
 
-                        sqlCmd.ExecuteNonQuery();
-                        MessageBox.Show("Registration complete");
-                        var LoginWindow = new LoginWindow();
-                        LoginWindow.Show();
-                        this.Close();
+                string namebytext = NameSignUP.Text;
+                string usernamebytext = UserNameSignUP.Text;
+                string passwordbytext = PasswordSignUP.Password;
+                string phonenumberbytext = PhonenumberSignup.Text;
+                string emailbytext = EmailSignup.Text;
+                string adressbytext = AdressSignnup.Text;
 
-                        
-                    }
-                    //satte phonenumber till 10 totala siffror om man skriver mer så crashar de egentiligen men satte en catch så tar skriver felmeddelandet.
-                    catch(Microsoft.Data.SqlClient.SqlException)
-                    {
-                        MessageBox.Show("Your are only allowed 10 numbers in your phonenumber", "Error");
-                    }
-                }
+                ctx.AddRange(new List<Customer> {
+                    new Customer {Name = namebytext,
+                                 Username = usernamebytext,
+                                 Password = passwordbytext,
+                                 Phonenumber = phonenumberbytext,
+                                 Email = emailbytext,
+                                 Adress = adressbytext } });
+
+                ctx.SaveChanges();
             }
 
+            MessageBox.Show("Registration complete");
+            var LoginWindow = new LoginWindow();
+            LoginWindow.Show();
+            this.Close();
         }
 
         // en knapt som skickar tillbaka en till LoginWindow
